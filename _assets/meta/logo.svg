@@ -1,0 +1,8 @@
+<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+  <rect width="80" height="80" rx="14" fill="#FFC904"/>
+  <rect x="12" y="16" width="56" height="44" rx="4" fill="#1a1a1a"/>
+  <text x="21" y="33" font-family="monospace" font-size="10" fill="#FFC904" font-weight="700">#include</text>
+  <text x="21" y="45" font-family="monospace" font-size="11" fill="#FFC904" opacity="0.8">int main()</text>
+  <text x="21" y="56" font-family="monospace" font-size="10" fill="#FFC904" opacity="0.5">{...}</text>
+  <rect x="58" y="44" width="3" height="12" rx="1" fill="#FFC904" opacity="0.9"/>
+</svg>
