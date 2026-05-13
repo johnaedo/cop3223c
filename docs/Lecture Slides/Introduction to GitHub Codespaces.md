@@ -6,7 +6,8 @@ share_cop3223c: "true"
 site-folder: docs/Lecture Slides
 ---
 # Introduction to GitHub Codespaces  
-## A Complete C Development Workflow  
+## A Complete C Development Workflow 
+[view slides online](https://teaching.johnaedo.com/lectures/cop3223c/Introduction%20to%20GitHub%20Codespaces)
 
 ---
 ## Creating a Repository & Initializing a Codespace  
