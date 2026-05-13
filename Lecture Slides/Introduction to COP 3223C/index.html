@@ -4,11 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Course notes, code demos, and tutorials" name="description"/>
 <meta content="Dr. John Aedo" name="author"/>
-<link href="https://teaching.johnaedo.com/cop3223c/Examples/test-cop3223c/" rel="canonical"/>
-<link href="../../Lecture%20Slides/Introduction%20to%20COP%203223C/" rel="next"/>
+<link href="https://teaching.johnaedo.com/cop3223c/Lecture%20Slides/Introduction%20to%20COP%203223C/" rel="canonical"/>
+<link href="../../Examples/test-cop3223c/" rel="prev"/>
+<link href="../../Supplementary%20Material/%2B%2B%20Operator/" rel="next"/>
 <link href="../../_assets/meta/favicons.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Test cop3223c - COP 3223C - Introduction to Programming in C</title>
+<title>Introduction to COP 3223C - COP 3223C - Introduction to Programming in C</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -29,11 +30,11 @@
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" property="og:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" name="twitter:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/" name="site_url"/>
-<meta content="Test cop3223c" property="og:title"/>
-<meta content="Test cop3223c" name="twitter:title"/>
+<meta content="Introduction to COP 3223C" property="og:title"/>
+<meta content="Introduction to COP 3223C" name="twitter:title"/>
 <meta content="Course notes, code demos, and tutorials" name="og:description"/>
 <meta content="Course notes, code demos, and tutorials" name="twitter:description"/>
-<script> document.title = "Test cop3223c" </script>
+<script> document.title = "Introduction to COP 3223C" </script>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -74,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Test cop3223c
+              Introduction to COP 3223C
             
           </span>
 </div>
@@ -126,8 +127,8 @@
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Examples/test-cop3223c/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -135,8 +136,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Lecture%20Slides/Introduction%20to%20COP%203223C/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="./">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -180,19 +181,45 @@
     COP 3223C - Introduction to Programming in C
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
-<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Examples
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="true" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="false" aria-labelledby="__nav_1_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_1">
 <span class="md-nav__icon md-icon"></span>
             Examples
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Examples/test-cop3223c/">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    Test cop3223c
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+<svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
+<span class="md-ellipsis">
+    Lecture Slides
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Lecture Slides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item md-nav__item--active">
@@ -200,14 +227,14 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
-    Test cop3223c
+    Introduction to COP 3223C
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
-    Test cop3223c
+    Introduction to COP 3223C
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -217,10 +244,49 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hello">
+<a class="md-nav__link" href="#cop-3223c">
 <span class="md-ellipsis">
       
-        Hello
+        COP 3223C
+      
+    </span>
+</a>
+<nav aria-label="COP 3223C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intro-to-programming-with-c">
+<span class="md-ellipsis">
+      
+        Intro to Programming with C
+      
+    </span>
+</a>
+<nav aria-label="Intro to Programming with C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summer-2026-section-1">
+<span class="md-ellipsis">
+      
+        Summer 2026 · Section 1
+      
+    </span>
+</a>
+<nav aria-label="Summer 2026 · Section 1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#college-of-engineering-and-computer-science">
+<span class="md-ellipsis">
+      
+        College of Engineering and Computer Science
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dr-john-aedo">
+<span class="md-ellipsis">
+      
+        Dr. John Aedo
       
     </span>
 </a>
@@ -231,28 +297,260 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
-<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-<svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
-<span class="md-ellipsis">
-    Lecture Slides
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_2">
-<span class="md-nav__icon md-icon"></span>
-            Lecture Slides
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Introduction%20to%20COP%203223C/">
-<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<a class="md-nav__link" href="#course-overview">
 <span class="md-ellipsis">
-    Introduction to COP 3223C
-  </span>
+      
+        Course Overview
+      
+    </span>
 </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-instructor">
+<span class="md-ellipsis">
+      
+        Your Instructor
+      
+    </span>
+</a>
+<nav aria-label="Your Instructor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dr-john-aedo_1">
+<span class="md-ellipsis">
+      
+        Dr. John Aedo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teaching-team">
+<span class="md-ellipsis">
+      
+        Teaching Team
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#course-materials">
+<span class="md-ellipsis">
+      
+        Course Materials
+      
+    </span>
+</a>
+<nav aria-label="Course Materials" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required">
+<span class="md-ellipsis">
+      
+        Required
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommended">
+<span class="md-ellipsis">
+      
+        Recommended
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grading-scale">
+<span class="md-ellipsis">
+      
+        Grading Scale
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grading-breakdown">
+<span class="md-ellipsis">
+      
+        Grading Breakdown
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-assignments-40">
+<span class="md-ellipsis">
+      
+        Programming Assignments (40%)
+      
+    </span>
+</a>
+<nav aria-label="Programming Assignments (40%)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#late-penalty">
+<span class="md-ellipsis">
+      
+        Late Penalty:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exams-50">
+<span class="md-ellipsis">
+      
+        Exams (50%)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exam-policies">
+<span class="md-ellipsis">
+      
+        Exam Policies
+      
+    </span>
+</a>
+<nav aria-label="Exam Policies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#allowed-exceptions-only">
+<span class="md-ellipsis">
+      
+        Allowed exceptions only:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quizzes-10">
+<span class="md-ellipsis">
+      
+        Quizzes (10%)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-use-policy">
+<span class="md-ellipsis">
+      
+        AI Use Policy
+      
+    </span>
+</a>
+<nav aria-label="AI Use Policy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generative-ai-is-prohibited">
+<span class="md-ellipsis">
+      
+        ⚠️ Generative AI is PROHIBITED
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-no-ai">
+<span class="md-ellipsis">
+      
+        Why No AI?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-tips">
+<span class="md-ellipsis">
+      
+        Communication Tips
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#religious-observances-university-events">
+<span class="md-ellipsis">
+      
+        Religious Observances &amp; University Events
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unexpected-campus-closures">
+<span class="md-ellipsis">
+      
+        Unexpected Campus Closures
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-youll-learn">
+<span class="md-ellipsis">
+      
+        What You’ll Learn
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-youll-learn-cont">
+<span class="md-ellipsis">
+      
+        What You’ll Learn (cont.)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lets-get-started">
+<span class="md-ellipsis">
+      
+        Let’s Get Started
+      
+    </span>
+</a>
+<nav aria-label="Let’s Get Started" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cop-3223c-introduction-to-programming-with-c">
+<span class="md-ellipsis">
+      
+        COP 3223C — Introduction to Programming with C
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -328,13 +626,310 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#hello">
+<a class="md-nav__link" href="#cop-3223c">
 <span class="md-ellipsis">
       
-        Hello
+        COP 3223C
       
     </span>
 </a>
+<nav aria-label="COP 3223C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intro-to-programming-with-c">
+<span class="md-ellipsis">
+      
+        Intro to Programming with C
+      
+    </span>
+</a>
+<nav aria-label="Intro to Programming with C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summer-2026-section-1">
+<span class="md-ellipsis">
+      
+        Summer 2026 · Section 1
+      
+    </span>
+</a>
+<nav aria-label="Summer 2026 · Section 1" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#college-of-engineering-and-computer-science">
+<span class="md-ellipsis">
+      
+        College of Engineering and Computer Science
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dr-john-aedo">
+<span class="md-ellipsis">
+      
+        Dr. John Aedo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#course-overview">
+<span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#your-instructor">
+<span class="md-ellipsis">
+      
+        Your Instructor
+      
+    </span>
+</a>
+<nav aria-label="Your Instructor" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dr-john-aedo_1">
+<span class="md-ellipsis">
+      
+        Dr. John Aedo
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#teaching-team">
+<span class="md-ellipsis">
+      
+        Teaching Team
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#course-materials">
+<span class="md-ellipsis">
+      
+        Course Materials
+      
+    </span>
+</a>
+<nav aria-label="Course Materials" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#required">
+<span class="md-ellipsis">
+      
+        Required
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recommended">
+<span class="md-ellipsis">
+      
+        Recommended
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grading-scale">
+<span class="md-ellipsis">
+      
+        Grading Scale
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#grading-breakdown">
+<span class="md-ellipsis">
+      
+        Grading Breakdown
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programming-assignments-40">
+<span class="md-ellipsis">
+      
+        Programming Assignments (40%)
+      
+    </span>
+</a>
+<nav aria-label="Programming Assignments (40%)" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#late-penalty">
+<span class="md-ellipsis">
+      
+        Late Penalty:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exams-50">
+<span class="md-ellipsis">
+      
+        Exams (50%)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#exam-policies">
+<span class="md-ellipsis">
+      
+        Exam Policies
+      
+    </span>
+</a>
+<nav aria-label="Exam Policies" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#allowed-exceptions-only">
+<span class="md-ellipsis">
+      
+        Allowed exceptions only:
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quizzes-10">
+<span class="md-ellipsis">
+      
+        Quizzes (10%)
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ai-use-policy">
+<span class="md-ellipsis">
+      
+        AI Use Policy
+      
+    </span>
+</a>
+<nav aria-label="AI Use Policy" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#generative-ai-is-prohibited">
+<span class="md-ellipsis">
+      
+        ⚠️ Generative AI is PROHIBITED
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-no-ai">
+<span class="md-ellipsis">
+      
+        Why No AI?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#communication-tips">
+<span class="md-ellipsis">
+      
+        Communication Tips
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#religious-observances-university-events">
+<span class="md-ellipsis">
+      
+        Religious Observances &amp; University Events
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#unexpected-campus-closures">
+<span class="md-ellipsis">
+      
+        Unexpected Campus Closures
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-youll-learn">
+<span class="md-ellipsis">
+      
+        What You’ll Learn
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-youll-learn-cont">
+<span class="md-ellipsis">
+      
+        What You’ll Learn (cont.)
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lets-get-started">
+<span class="md-ellipsis">
+      
+        Let’s Get Started
+      
+    </span>
+</a>
+<nav aria-label="Let’s Get Started" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cop-3223c-introduction-to-programming-with-c">
+<span class="md-ellipsis">
+      
+        COP 3223C — Introduction to Programming with C
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
 </li>
 </ul>
 </nav>
@@ -370,19 +965,318 @@
   Hack: check whether the content contains a h1 headline. If it doesn't, the
   page title (or respectively site name) is used as the main headline.
 -->
-<h1>Test cop3223c</h1>
+<h1>Introduction to COP 3223C</h1>
 <!-- Page content -->
-<h2 id="hello">Hello<a class="headerlink" href="#hello" title="Permanent link">¶</a></h2>
+<h2 id="cop-3223c">COP 3223C<a class="headerlink" href="#cop-3223c" title="Permanent link">¶</a></h2>
+<h3 id="intro-to-programming-with-c">Intro to Programming with C<a class="headerlink" href="#intro-to-programming-with-c" title="Permanent link">¶</a></h3>
+<h4 id="summer-2026-section-1">Summer 2026 · Section 1<a class="headerlink" href="#summer-2026-section-1" title="Permanent link">¶</a></h4>
+<h5 id="college-of-engineering-and-computer-science">College of Engineering and Computer Science<a class="headerlink" href="#college-of-engineering-and-computer-science" title="Permanent link">¶</a></h5>
+<h5 id="dr-john-aedo">Dr. John Aedo<a class="headerlink" href="#dr-john-aedo" title="Permanent link">¶</a></h5>
+<hr/>
+<h3 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Term</strong></td>
+<td>Summer 2026</td>
+</tr>
+<tr>
+<td><strong>Days</strong></td>
+<td>Monday &amp; Wednesday</td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td>2:00 PM – 3:50 PM</td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>CB1 O104</td>
+</tr>
+<tr>
+<td><strong>Credits</strong></td>
+<td>3 hours</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="your-instructor">Your Instructor<a class="headerlink" href="#your-instructor" title="Permanent link">¶</a></h3>
+<h4 id="dr-john-aedo_1">Dr. John Aedo<a class="headerlink" href="#dr-john-aedo_1" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Email:</strong> <a href="mailto:John.Aedo@ucf.edu">John.Aedo@ucf.edu</a> <em>(Outlook only — not Canvas)</em></li>
+<li><strong>Office Hours:</strong> Tue &amp; Thu, 1:00 PM – 4:00 PM (Zoom)</li>
+<li><strong>Response Time:</strong> Within 2 business days</li>
+<li>Always include <strong>COP 3223C</strong> in your subject line</li>
+</ul>
+<hr/>
+<h3 id="teaching-team">Teaching Team<a class="headerlink" href="#teaching-team" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TA</strong></td>
+<td>Eshgin Hasanov</td>
+<td><a href="mailto:eshgin.hasanov@ucf.edu">eshgin.hasanov@ucf.edu</a></td>
+</tr>
+<tr>
+<td><strong>ULA</strong></td>
+<td>Farrukh Anwar</td>
+<td><a href="mailto:farrukh.anwar@ucf.edu">farrukh.anwar@ucf.edu</a></td>
+</tr>
+<tr>
+<td><strong>SI</strong></td>
+<td>Annika Blackburn</td>
+<td><a href="mailto:annika.blackburn@ucf.edu">annika.blackburn@ucf.edu</a></td>
+</tr>
+<tr>
+<td><strong>Grader</strong></td>
+<td>Adnan Hossain</td>
+<td><a href="mailto:adnan.hossain@ucf.edu">adnan.hossain@ucf.edu</a></td>
+</tr>
+<tr>
+<td><strong>Grader</strong></td>
+<td>Abrar Abousher</td>
+<td><a href="mailto:abrar.abousher@ucf.edu">abrar.abousher@ucf.edu</a></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="course-materials">Course Materials<a class="headerlink" href="#course-materials" title="Permanent link">¶</a></h3>
+<h4 id="required">Required<a class="headerlink" href="#required" title="Permanent link">¶</a></h4>
+<ul>
+<li>None (no required textbook purchase)</li>
+</ul>
+<h4 id="recommended">Recommended<a class="headerlink" href="#recommended" title="Permanent link">¶</a></h4>
+<ul>
+<li><em>C Programming</em> — Wikipedia</li>
+<li><em>The C Programming Language</em> — Kernighan &amp; Ritchie (ISBN: 0131103628)</li>
+</ul>
+<hr/>
+<h3 id="grading-scale">Grading Scale<a class="headerlink" href="#grading-scale" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>90 - 100%</td>
+</tr>
+<tr>
+<td>B</td>
+<td>80 - \&lt;90%</td>
+</tr>
+<tr>
+<td>C</td>
+<td>70 - \&lt;80%</td>
+</tr>
+<tr>
+<td>D</td>
+<td>60 - \&lt;70%</td>
+</tr>
+<tr>
+<td>F</td>
+<td>\&lt;60%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>No Rounding</li>
+<li>No Grade Bumps</li>
+</ul>
+<hr/>
+<h3 id="grading-breakdown">Grading Breakdown<a class="headerlink" href="#grading-breakdown" title="Permanent link">¶</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programming Assignments</td>
+<td><strong>40%</strong></td>
+</tr>
+<tr>
+<td>Midterm Exam</td>
+<td><strong>25%</strong></td>
+</tr>
+<tr>
+<td>Final Exam</td>
+<td><strong>25%</strong></td>
+</tr>
+<tr>
+<td>Quizzes</td>
+<td><strong>10%</strong></td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="programming-assignments-40">Programming Assignments (40%)<a class="headerlink" href="#programming-assignments-40" title="Permanent link">¶</a></h3>
+<ul>
+<li>Assigned at the beginning of each module</li>
+<li><strong>One week</strong> to complete and submit</li>
+<li>Submit <strong><code>.c</code> and <code>.h</code> files only</strong> to Webcourses</li>
+</ul>
+<h4 id="late-penalty">Late Penalty:<a class="headerlink" href="#late-penalty" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Days Late</th>
+<th>Penalty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 day</td>
+<td>−10%</td>
+</tr>
+<tr>
+<td>2 days</td>
+<td>−20%</td>
+</tr>
+<tr>
+<td>3 days</td>
+<td>−30%</td>
+</tr>
+<tr>
+<td>4+ days</td>
+<td><strong>0 (not accepted)</strong></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h3 id="exams-50">Exams (50%)<a class="headerlink" href="#exams-50" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Two exams:</strong> Midterm + Cumulative Final</li>
+<li>Delivered <strong>electronically</strong> at the <strong>Evaluation &amp; Proficiency Center (EPC)</strong></li>
+<li><em>2nd floor, Engineering Building 2</em></li>
+<li>Must <strong>schedule in advance</strong> — no walk-ins</li>
+<li>Required: valid <strong>UCF ID Card</strong></li>
+<li>Format: <strong>Closed Book / Closed Notes</strong></li>
+<li>Instructor-supplied Testing Reference Sheet provided</li>
+</ul>
+<hr/>
+<h3 id="exam-policies">Exam Policies<a class="headerlink" href="#exam-policies" title="Permanent link">¶</a></h3>
+<h4 id="allowed-exceptions-only">Allowed exceptions only:<a class="headerlink" href="#allowed-exceptions-only" title="Permanent link">¶</a></h4>
+<ol>
+<li>SAS (Student Accessibility Services) authorization</li>
+<li>Medical doctor’s note with excusal period</li>
+<li>Official UCF sanctioned event paperwork</li>
+<li>UCF-announced weather/campus closures</li>
+</ol>
+<blockquote>
+<p>Personal emergencies, traffic, parking, job interviews — <strong>not eligible for exceptions</strong></p>
+</blockquote>
+<hr/>
+<h3 id="quizzes-10">Quizzes (10%)<a class="headerlink" href="#quizzes-10" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>N pairs</strong> of quizzes planned for the semester</li>
+<li>Each quiz is offered <strong>twice on consecutive weeks</strong></li>
+<li>Score perfectly on week 1? → <strong>Skip week 2</strong></li>
+<li>Otherwise: review misses and retake a similar quiz</li>
+<li><strong>Highest score</strong> of each pair is kept</li>
+<li>Designed to prepare you for exams</li>
+</ul>
+<hr/>
+<h3 id="ai-use-policy">AI Use Policy<a class="headerlink" href="#ai-use-policy" title="Permanent link">¶</a></h3>
+<h4 id="generative-ai-is-prohibited">⚠️ Generative AI is <strong>PROHIBITED</strong><a class="headerlink" href="#generative-ai-is-prohibited" title="Permanent link">¶</a></h4>
+<p>This includes:</p>
+<ul>
+<li>GitHub Copilot, Claude Code, Cursor, Codex</li>
+<li>ChatGPT, Claude, Gemini, and similar chatbots</li>
+<li>Any AI tool that generates or suggests code</li>
+</ul>
+<blockquote>
+<p>Violations are treated as <strong>academic misconduct</strong> and will result in a failing grade and conduct report.</p>
+</blockquote>
+<hr/>
+<h3 id="why-no-ai">Why No AI?<a class="headerlink" href="#why-no-ai" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Skill Development</strong> — Build fundamentals before relying on tools</li>
+<li><strong>Plagiarism Risk</strong> — AI-generated code may be flagged</li>
+<li><strong>Learning Integrity</strong> — Understanding &gt; shortcuts</li>
+</ol>
+<p><em>If you’re unsure whether a tool is permitted, ask the instructor </em><em>before</em><em> using it.</em></p>
+<hr/>
+<h3 id="communication-tips">Communication Tips<a class="headerlink" href="#communication-tips" title="Permanent link">¶</a></h3>
+<ul>
+<li>✅ Email via <strong>Outlook</strong> (not Canvas messages)</li>
+<li>✅ Include <strong>COP 3223C</strong> in subject line</li>
+<li>✅ Watch <strong>Webcourses announcements</strong> — missing one is not an excuse</li>
+<li>⏰ Replies within 2 business days (weekdays before 5 PM)</li>
+<li>🚫 No weekend replies</li>
+</ul>
+<hr/>
+<h3 id="religious-observances-university-events">Religious Observances &amp; University Events<a class="headerlink" href="#religious-observances-university-events" title="Permanent link">¶</a></h3>
+<ul>
+<li>Notify instructor <strong>as soon as possible</strong> in advance</li>
+<li>Student athletes: provide <strong>Program Verification Form</strong> before absence</li>
+<li>Religious observances: reasonable time to make up missed work</li>
+<li>See UCF Policy 4-401 and UCF Regulation 5-020</li>
+</ul>
+<hr/>
+<h3 id="unexpected-campus-closures">Unexpected Campus Closures<a class="headerlink" href="#unexpected-campus-closures" title="Permanent link">¶</a></h3>
+<blockquote>
+<p>In the event of hurricanes, tropical storms, or other emergency closures:</p>
+</blockquote>
+<ul>
+<li>No deadlines enforced during closure</li>
+<li>Schedule and due dates <strong>re-evaluated</strong> when campus reopens</li>
+</ul>
+<hr/>
+<h3 id="what-youll-learn">What You’ll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">¶</a></h3>
+<ol>
+<li>Set up C development environments &amp; use <code>git</code></li>
+<li>Write complete C programs with headers &amp; preprocessor directives</li>
+<li>Use standard libraries: <code>stdio</code>, <code>stdlib</code>, <code>math</code>, <code>string</code>, <code>time</code></li>
+<li>Apply conditional statements, loops, and functions</li>
+<li>Work with <strong>pointers</strong>, <strong>arrays</strong>, and <strong>strings</strong></li>
+</ol>
+<hr/>
+<h3 id="what-youll-learn-cont">What You’ll Learn (cont.)<a class="headerlink" href="#what-youll-learn-cont" title="Permanent link">¶</a></h3>
+<ol start="6">
+<li>Perform file I/O for data persistence</li>
+<li>Define and use <strong>structs</strong></li>
+<li>Apply <strong>dynamic memory management</strong> (<code>malloc</code> / <code>free</code>)</li>
+<li>Implement complex data structures like <strong>linked lists</strong></li>
+<li>Follow C style conventions and best practices</li>
+</ol>
+<hr/>
+<h2 id="lets-get-started">Let’s Get Started<a class="headerlink" href="#lets-get-started" title="Permanent link">¶</a></h2>
+<h4 id="cop-3223c-introduction-to-programming-with-c">COP 3223C — Introduction to Programming with C<a class="headerlink" href="#cop-3223c-introduction-to-programming-with-c" title="Permanent link">¶</a></h4>
+<p><strong>Summer 2026</strong></p>
+<p>Questions? Email: <a href="mailto:John.Aedo@ucf.edu">John.Aedo@ucf.edu</a><br/>
+<em>(Include COP 3223C in the subject line)</em></p>
 <hr/>
 <div class="md-source-file">
 <small>
 <!-- mkdocs-git-revision-date-localized-plugin -->
 <u>Last update</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 20:43:31 UTC">May 1, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 13, 2026 00:05:21 UTC">May 13, 2026</span>
 <!-- mkdocs-git-revision-date-plugin -->
 <br/>
 <u>Created</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 1, 2026 20:43:31 UTC">May 1, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 13, 2026 00:05:21 UTC">May 13, 2026</span>
 </small>
 </div>
 <!-- Was this page helpful? -->
@@ -391,7 +1285,7 @@
     try {
       const index = document.querySelector('h1').innerHTML;
       if (index === "Index") {
-        document.querySelector('h1').innerHTML = "Test cop3223c";
+        document.querySelector('h1').innerHTML = "Introduction to COP 3223C";
       }
     } catch (error) {
       // console.log(error);
