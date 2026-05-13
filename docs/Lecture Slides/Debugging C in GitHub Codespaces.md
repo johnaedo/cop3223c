@@ -7,7 +7,8 @@ site-folder: docs/Lecture Slides
 ---
 
 # Debugging C in GitHub Codespaces  
-## A Step-by-Step Guide to Native Development  
+## A Step-by-Step Guide to Native Development 
+[view slides online](https://teaching.johnaedo.com/lectures/cop3223c/Debugging%20C%20in%20GitHub%20Codespaces)
   
 ---
 ## Prerequisites for C Development  
