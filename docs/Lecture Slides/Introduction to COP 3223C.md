@@ -11,6 +11,7 @@ site-folder: docs/Lecture Slides
 ### Summer 2026 · Section 1
 #### College of Engineering and Computer Science
 #### Dr. John Aedo
+[view slides online](https://teaching.johnaedo.com/lectures/cop3223c/Introduction%20to%20COP%203223C/)
 
 ---
 
