@@ -31,30 +31,37 @@ To automate C compilation and debugging, create these files in the `.vscode` dir
 **1. `tasks.json` (Build)**  
 ```json  
 {  
- "version": "2.0.0",  
- "tasks": [  
-   {  
-     "label": "Build C Program",  
-     "command": "gcc",  
-     "args": ["-g", "main.c", "-o", "main.out"],  
-     "type": "shell"  
-   }  
- ]  
-}  
+    "version": "2.0.0",  
+    "tasks": [
+        {  
+            "label": "Build C Program",  
+            "command": "gcc",  
+            "args": [
+                    "-g",
+                    "hello.c",
+                    "-o",
+                    "hello"
+            ],  
+            "type": "shell"  
+        }  
+    ]
+}
 ```  
 ---
 
 **2. `c_cpp_properties.json` (IntelliSense)**  
 ```json  
-
-"configurations": [
-	{  
-	 "compilerPath": "/usr/bin/gcc",  
-	 "cStandard": "c11",  
-	 "cppStandard": "c++11"  
-	}
-],
-"version": 4  
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11"
+        }
+    ],
+    "version": 4
+}
 ```  
 <br><br>  
 > *Tip*: The `gcc -g` flag ensures debug symbols are generated for the debugger.  
@@ -68,21 +75,21 @@ This file tells VS Code how to start the debugger.
 **Location**: `.vscode/launch.json`  
   
 ```json  
-{  
- "version": "0.2.0",  
- "configurations": [  
-   {  
-     "name": "C/C++ Debug",  
-     "type": "cppdbg",  
-     "request": "launch",  
-     "MIMode": "gdb",  
-     "miDebuggerPath": "/usr/bin/gdb",  
-     "cwd": "${workspaceFolder}",  
-     "program": "${workspaceFolder}/main.out",  
-     "preLaunchTask": "Build C Program"  
-   }  
- ]  
-}  
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug C Program",
+            "type": "cppdbg",
+            "request": "launch",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "cwd": "${workspaceFolder}",
+            "program": "${workspaceFolder}/hello",
+            "preLaunchTask": "Build C Program"
+        }
+    ]
+}
 ```  
   
 > **Auto-build**: The `preLaunchTask` compiles your code automatically before attaching the debugger.  
