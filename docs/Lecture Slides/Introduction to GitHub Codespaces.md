@@ -21,9 +21,9 @@ site-folder: docs/Lecture Slides
 
 ---
 1. Create a new repository on GitHub.  
- 2. Navigate to the **Code** button.  
- 3. Select the **Codespaces** tab.  
- 4. Click **New Codespace**.  
+2. Navigate to the **Code** button.
+3. Select the **Codespaces** tab.
+4. Click **New Codespace**.  
 
 
 > ⚡ *The Environment*: VS Code opens in your browser with a cloud-attached container. 
