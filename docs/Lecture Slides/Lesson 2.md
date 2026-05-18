@@ -6,6 +6,7 @@ height: "1080"
 width: "1920"
 ---
 # Week 2: Getting Started in C
+[View Presentation Online](http://teaching.johnaedo.com/lectures/cop3223c/Lesson%202%20-%20Getting%20Started%20in%20C/)
 
 ---
 
