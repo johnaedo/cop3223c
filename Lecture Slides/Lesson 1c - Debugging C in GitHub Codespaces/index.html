@@ -4,12 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Course notes, code demos, and tutorials" name="description"/>
 <meta content="Dr. John Aedo" name="author"/>
-<link href="https://teaching.johnaedo.com/cop3223c/Lecture%20Slides/Lesson%201-1%20-%20Introduction%20to%20COP%203223C/" rel="canonical"/>
-<link href="../../Examples/test-cop3223c/" rel="prev"/>
-<link href="../Lesson%201-2%20-%20Introduction%20to%20GitHub%20Codespaces/" rel="next"/>
+<link href="https://teaching.johnaedo.com/cop3223c/Lecture%20Slides/Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/" rel="canonical"/>
+<link href="../Lesson%201b%20-%20Introduction%20to%20GitHub%20Codespaces/" rel="prev"/>
+<link href="../Lesson%202/" rel="next"/>
 <link href="../../_assets/meta/favicons.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Lesson 1 1 Introduction to COP 3223C - COP 3223C - Introduction to Programming in C</title>
+<title>Lesson 1c Debugging C in GitHub Codespaces - COP 3223C - Introduction to Programming in C</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -30,11 +30,11 @@
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" property="og:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" name="twitter:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/" name="site_url"/>
-<meta content="Lesson 1 1   Introduction to COP 3223C" property="og:title"/>
-<meta content="Lesson 1 1   Introduction to COP 3223C" name="twitter:title"/>
+<meta content="Lesson 1c   Debugging C in GitHub Codespaces" property="og:title"/>
+<meta content="Lesson 1c   Debugging C in GitHub Codespaces" name="twitter:title"/>
 <meta content="Course notes, code demos, and tutorials" name="og:description"/>
 <meta content="Course notes, code demos, and tutorials" name="twitter:description"/>
-<script> document.title = "Lesson 1 1   Introduction to COP 3223C" </script>
+<script> document.title = "Lesson 1c   Debugging C in GitHub Codespaces" </script>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Lesson 1 1   Introduction to COP 3223C
+              Lesson 1c   Debugging C in GitHub Codespaces
             
           </span>
 </div>
@@ -146,7 +146,7 @@
         </a>
 </li>
 <li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="./">
+<a class="md-tabs__link" href="../Lesson%201-1%20-%20Introduction%20to%20COP%203223C/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -248,335 +248,13 @@
             Lecture Slides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
-<span class="md-ellipsis">
-    Lesson 1 1   Introduction to COP 3223C
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Lesson%201-1%20-%20Introduction%20to%20COP%203223C/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1 1   Introduction to COP 3223C
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cop-3223c">
-<span class="md-ellipsis">
-      
-        COP 3223C
-      
-    </span>
-</a>
-<nav aria-label="COP 3223C" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#intro-to-programming-with-c">
-<span class="md-ellipsis">
-      
-        Intro to Programming with C
-      
-    </span>
-</a>
-<nav aria-label="Intro to Programming with C" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#summer-2026-section-1">
-<span class="md-ellipsis">
-      
-        Summer 2026 · Section 1
-      
-    </span>
-</a>
-<nav aria-label="Summer 2026 · Section 1" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#college-of-engineering-and-computer-science">
-<span class="md-ellipsis">
-      
-        College of Engineering and Computer Science
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dr-john-aedo">
-<span class="md-ellipsis">
-      
-        Dr. John Aedo
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#course-overview">
-<span class="md-ellipsis">
-      
-        Course Overview
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#your-instructor">
-<span class="md-ellipsis">
-      
-        Your Instructor
-      
-    </span>
-</a>
-<nav aria-label="Your Instructor" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#dr-john-aedo_1">
-<span class="md-ellipsis">
-      
-        Dr. John Aedo
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#teaching-team">
-<span class="md-ellipsis">
-      
-        Teaching Team
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#course-materials">
-<span class="md-ellipsis">
-      
-        Course Materials
-      
-    </span>
-</a>
-<nav aria-label="Course Materials" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#required">
-<span class="md-ellipsis">
-      
-        Required
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recommended">
-<span class="md-ellipsis">
-      
-        Recommended
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#grading-scale">
-<span class="md-ellipsis">
-      
-        Grading Scale
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#grading-breakdown">
-<span class="md-ellipsis">
-      
-        Grading Breakdown
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#programming-assignments-40">
-<span class="md-ellipsis">
-      
-        Programming Assignments (40%)
-      
-    </span>
-</a>
-<nav aria-label="Programming Assignments (40%)" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#late-penalty">
-<span class="md-ellipsis">
-      
-        Late Penalty:
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#exams-50">
-<span class="md-ellipsis">
-      
-        Exams (50%)
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#exam-policies">
-<span class="md-ellipsis">
-      
-        Exam Policies
-      
-    </span>
-</a>
-<nav aria-label="Exam Policies" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#allowed-exceptions-only">
-<span class="md-ellipsis">
-      
-        Allowed exceptions only:
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#quizzes-10">
-<span class="md-ellipsis">
-      
-        Quizzes (10%)
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ai-use-policy">
-<span class="md-ellipsis">
-      
-        AI Use Policy
-      
-    </span>
-</a>
-<nav aria-label="AI Use Policy" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#generative-ai-is-prohibited">
-<span class="md-ellipsis">
-      
-        ⚠️ Generative AI is PROHIBITED
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#why-no-ai">
-<span class="md-ellipsis">
-      
-        Why No AI?
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication-tips">
-<span class="md-ellipsis">
-      
-        Communication Tips
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#religious-observances-university-events">
-<span class="md-ellipsis">
-      
-        Religious Observances &amp; University Events
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#unexpected-campus-closures">
-<span class="md-ellipsis">
-      
-        Unexpected Campus Closures
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-youll-learn">
-<span class="md-ellipsis">
-      
-        What You’ll Learn
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-youll-learn-cont">
-<span class="md-ellipsis">
-      
-        What You’ll Learn (cont.)
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lets-get-started">
-<span class="md-ellipsis">
-      
-        Let’s Get Started
-      
-    </span>
-</a>
-<nav aria-label="Let’s Get Started" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cop-3223c-introduction-to-programming-with-c">
-<span class="md-ellipsis">
-      
-        COP 3223C — Introduction to Programming with C
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Lesson%201-2%20-%20Introduction%20to%20GitHub%20Codespaces/">
@@ -610,13 +288,201 @@
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    Lesson 1c   Debugging C in GitHub Codespaces
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1c   Debugging C in GitHub Codespaces
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#debugging-c-in-github-codespaces">
+<span class="md-ellipsis">
+      
+        Debugging C in GitHub Codespaces
+      
+    </span>
+</a>
+<nav aria-label="Debugging C in GitHub Codespaces" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-step-by-step-guide-to-native-development">
+<span class="md-ellipsis">
+      
+        A Step-by-Step Guide to Native Development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#prerequisites-for-c-development">
+<span class="md-ellipsis">
+      
+        Prerequisites for C Development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-the-project-structure">
+<span class="md-ellipsis">
+      
+        Configuring the Project Structure
+      
+    </span>
+</a>
+<nav aria-label="Configuring the Project Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-configuration-files">
+<span class="md-ellipsis">
+      
+        .vscode Configuration Files
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setting-up-the-debug-session">
+<span class="md-ellipsis">
+      
+        Setting Up the Debug Session
+      
+    </span>
+</a>
+<nav aria-label="Setting Up the Debug Session" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#launchjson-configuration">
+<span class="md-ellipsis">
+      
+        launch.json Configuration
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#interactive-debugging-workflow">
+<span class="md-ellipsis">
+      
+        Interactive Debugging Workflow
+      
+    </span>
+</a>
+<nav aria-label="Interactive Debugging Workflow" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#5-steps-to-debug-c-code">
+<span class="md-ellipsis">
+      
+        5 Steps to Debug C Code
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#git-integration-for-c-projects">
+<span class="md-ellipsis">
+      
+        Git Integration for C Projects
+      
+    </span>
+</a>
+<nav aria-label="Git Integration for C Projects" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#managing-source-control-in-codespaces">
+<span class="md-ellipsis">
+      
+        Managing Source Control in Codespaces
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#common-pitfalls">
+<span class="md-ellipsis">
+      
+        ⚠ Common Pitfalls
+      
+    </span>
+</a>
+<nav aria-label="⚠ Common Pitfalls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting-c-debugging">
+<span class="md-ellipsis">
+      
+        Troubleshooting C Debugging
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#summary-next-steps">
+<span class="md-ellipsis">
+      
+        Summary &amp; Next Steps
+      
+    </span>
+</a>
+<nav aria-label="Summary &amp; Next Steps" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recap">
+<span class="md-ellipsis">
+      
+        Recap
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#our-challenge">
+<span class="md-ellipsis">
+      
+        Our Challenge
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../Lesson%202/">
@@ -742,49 +608,48 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#cop-3223c">
+<a class="md-nav__link" href="#debugging-c-in-github-codespaces">
 <span class="md-ellipsis">
       
-        COP 3223C
+        Debugging C in GitHub Codespaces
       
     </span>
 </a>
-<nav aria-label="COP 3223C" class="md-nav">
+<nav aria-label="Debugging C in GitHub Codespaces" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#intro-to-programming-with-c">
+<a class="md-nav__link" href="#a-step-by-step-guide-to-native-development">
 <span class="md-ellipsis">
       
-        Intro to Programming with C
-      
-    </span>
-</a>
-<nav aria-label="Intro to Programming with C" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#summer-2026-section-1">
-<span class="md-ellipsis">
-      
-        Summer 2026 · Section 1
-      
-    </span>
-</a>
-<nav aria-label="Summer 2026 · Section 1" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#college-of-engineering-and-computer-science">
-<span class="md-ellipsis">
-      
-        College of Engineering and Computer Science
+        A Step-by-Step Guide to Native Development
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dr-john-aedo">
+<a class="md-nav__link" href="#prerequisites-for-c-development">
 <span class="md-ellipsis">
       
-        Dr. John Aedo
+        Prerequisites for C Development
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#configuring-the-project-structure">
+<span class="md-ellipsis">
+      
+        Configuring the Project Structure
+      
+    </span>
+</a>
+<nav aria-label="Configuring the Project Structure" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#vscode-configuration-files">
+<span class="md-ellipsis">
+      
+        .vscode Configuration Files
       
     </span>
 </a>
@@ -796,29 +661,20 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#course-overview">
+<a class="md-nav__link" href="#setting-up-the-debug-session">
 <span class="md-ellipsis">
       
-        Course Overview
+        Setting Up the Debug Session
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#your-instructor">
-<span class="md-ellipsis">
-      
-        Your Instructor
-      
-    </span>
-</a>
-<nav aria-label="Your Instructor" class="md-nav">
+<nav aria-label="Setting Up the Debug Session" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#dr-john-aedo_1">
+<a class="md-nav__link" href="#launchjson-configuration">
 <span class="md-ellipsis">
       
-        Dr. John Aedo
+        launch.json Configuration
       
     </span>
 </a>
@@ -827,38 +683,20 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#teaching-team">
+<a class="md-nav__link" href="#interactive-debugging-workflow">
 <span class="md-ellipsis">
       
-        Teaching Team
+        Interactive Debugging Workflow
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#course-materials">
-<span class="md-ellipsis">
-      
-        Course Materials
-      
-    </span>
-</a>
-<nav aria-label="Course Materials" class="md-nav">
+<nav aria-label="Interactive Debugging Workflow" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#required">
+<a class="md-nav__link" href="#5-steps-to-debug-c-code">
 <span class="md-ellipsis">
       
-        Required
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#recommended">
-<span class="md-ellipsis">
-      
-        Recommended
+        5 Steps to Debug C Code
       
     </span>
 </a>
@@ -867,38 +705,20 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#grading-scale">
+<a class="md-nav__link" href="#git-integration-for-c-projects">
 <span class="md-ellipsis">
       
-        Grading Scale
+        Git Integration for C Projects
       
     </span>
 </a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#grading-breakdown">
-<span class="md-ellipsis">
-      
-        Grading Breakdown
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#programming-assignments-40">
-<span class="md-ellipsis">
-      
-        Programming Assignments (40%)
-      
-    </span>
-</a>
-<nav aria-label="Programming Assignments (40%)" class="md-nav">
+<nav aria-label="Git Integration for C Projects" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#late-penalty">
+<a class="md-nav__link" href="#managing-source-control-in-codespaces">
 <span class="md-ellipsis">
       
-        Late Penalty:
+        Managing Source Control in Codespaces
       
     </span>
 </a>
@@ -907,29 +727,39 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exams-50">
+<a class="md-nav__link" href="#common-pitfalls">
 <span class="md-ellipsis">
       
-        Exams (50%)
+        ⚠ Common Pitfalls
+      
+    </span>
+</a>
+<nav aria-label="⚠ Common Pitfalls" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#troubleshooting-c-debugging">
+<span class="md-ellipsis">
+      
+        Troubleshooting C Debugging
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#exam-policies">
+<a class="md-nav__link" href="#summary-next-steps">
 <span class="md-ellipsis">
       
-        Exam Policies
+        Summary &amp; Next Steps
       
     </span>
 </a>
-<nav aria-label="Exam Policies" class="md-nav">
+<nav aria-label="Summary &amp; Next Steps" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#allowed-exceptions-only">
+<a class="md-nav__link" href="#recap">
 <span class="md-ellipsis">
       
-        Allowed exceptions only:
+        Recap
       
     </span>
 </a>
@@ -938,108 +768,10 @@
 </nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#quizzes-10">
+<a class="md-nav__link" href="#our-challenge">
 <span class="md-ellipsis">
       
-        Quizzes (10%)
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#ai-use-policy">
-<span class="md-ellipsis">
-      
-        AI Use Policy
-      
-    </span>
-</a>
-<nav aria-label="AI Use Policy" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#generative-ai-is-prohibited">
-<span class="md-ellipsis">
-      
-        ⚠️ Generative AI is PROHIBITED
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#why-no-ai">
-<span class="md-ellipsis">
-      
-        Why No AI?
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#communication-tips">
-<span class="md-ellipsis">
-      
-        Communication Tips
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#religious-observances-university-events">
-<span class="md-ellipsis">
-      
-        Religious Observances &amp; University Events
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#unexpected-campus-closures">
-<span class="md-ellipsis">
-      
-        Unexpected Campus Closures
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-youll-learn">
-<span class="md-ellipsis">
-      
-        What You’ll Learn
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#what-youll-learn-cont">
-<span class="md-ellipsis">
-      
-        What You’ll Learn (cont.)
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#lets-get-started">
-<span class="md-ellipsis">
-      
-        Let’s Get Started
-      
-    </span>
-</a>
-<nav aria-label="Let’s Get Started" class="md-nav">
-<ul class="md-nav__list">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#cop-3223c-introduction-to-programming-with-c">
-<span class="md-ellipsis">
-      
-        COP 3223C — Introduction to Programming with C
+        Our Challenge
       
     </span>
 </a>
@@ -1081,319 +813,161 @@
   Hack: check whether the content contains a h1 headline. If it doesn't, the
   page title (or respectively site name) is used as the main headline.
 -->
-<h1>Lesson 1 1   Introduction to COP 3223C</h1>
 <!-- Page content -->
-<h2 id="cop-3223c">COP 3223C<a class="headerlink" href="#cop-3223c" title="Permanent link">¶</a></h2>
-<h3 id="intro-to-programming-with-c">Intro to Programming with C<a class="headerlink" href="#intro-to-programming-with-c" title="Permanent link">¶</a></h3>
-<h4 id="summer-2026-section-1">Summer 2026 · Section 1<a class="headerlink" href="#summer-2026-section-1" title="Permanent link">¶</a></h4>
-<h5 id="college-of-engineering-and-computer-science">College of Engineering and Computer Science<a class="headerlink" href="#college-of-engineering-and-computer-science" title="Permanent link">¶</a></h5>
-<h5 id="dr-john-aedo">Dr. John Aedo<a class="headerlink" href="#dr-john-aedo" title="Permanent link">¶</a></h5>
-<p><a href="https://teaching.johnaedo.com/lectures/cop3223c/Introduction%20to%20COP%203223C/">view slides online</a></p>
+<h2 id="debugging-c-in-github-codespaces">Debugging C in GitHub Codespaces<a class="headerlink" href="#debugging-c-in-github-codespaces" title="Permanent link">¶</a></h2>
+<h3 id="a-step-by-step-guide-to-native-development">A Step-by-Step Guide to Native Development<a class="headerlink" href="#a-step-by-step-guide-to-native-development" title="Permanent link">¶</a></h3>
+<p><a href="https://teaching.johnaedo.com/lectures/cop3223c/Debugging%20C%20in%20GitHub%20Codespaces">view slides online</a></p>
 <hr/>
-<h3 id="course-overview">Course Overview<a class="headerlink" href="#course-overview" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Term</strong></td>
-<td>Summer 2026</td>
-</tr>
-<tr>
-<td><strong>Days</strong></td>
-<td>Monday &amp; Wednesday</td>
-</tr>
-<tr>
-<td><strong>Time</strong></td>
-<td>2:00 PM – 3:50 PM</td>
-</tr>
-<tr>
-<td><strong>Location</strong></td>
-<td>CB1 O104</td>
-</tr>
-<tr>
-<td><strong>Credits</strong></td>
-<td>3 hours</td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="your-instructor">Your Instructor<a class="headerlink" href="#your-instructor" title="Permanent link">¶</a></h3>
-<h4 id="dr-john-aedo_1">Dr. John Aedo<a class="headerlink" href="#dr-john-aedo_1" title="Permanent link">¶</a></h4>
-<ul>
-<li><strong>Email:</strong> <a href="mailto:John.Aedo@ucf.edu">John.Aedo@ucf.edu</a> <em>(Outlook only — not Canvas)</em></li>
-<li><strong>Office Hours:</strong> Tue &amp; Thu, 1:00 PM – 4:00 PM (Zoom)</li>
-<li><strong>Response Time:</strong> Within 2 business days</li>
-<li>Always include <strong>COP 3223C</strong> in your subject line</li>
-</ul>
-<hr/>
-<h3 id="teaching-team">Teaching Team<a class="headerlink" href="#teaching-team" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Role</th>
-<th>Name</th>
-<th>Email</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>TA</strong></td>
-<td>Eshgin Hasanov</td>
-<td><a href="mailto:eshgin.hasanov@ucf.edu">eshgin.hasanov@ucf.edu</a></td>
-</tr>
-<tr>
-<td><strong>ULA</strong></td>
-<td>Farrukh Anwar</td>
-<td><a href="mailto:farrukh.anwar@ucf.edu">farrukh.anwar@ucf.edu</a></td>
-</tr>
-<tr>
-<td><strong>SI</strong></td>
-<td>Annika Blackburn</td>
-<td><a href="mailto:annika.blackburn@ucf.edu">annika.blackburn@ucf.edu</a></td>
-</tr>
-<tr>
-<td><strong>Grader</strong></td>
-<td>Adnan Hossain</td>
-<td><a href="mailto:adnan.hossain@ucf.edu">adnan.hossain@ucf.edu</a></td>
-</tr>
-<tr>
-<td><strong>Grader</strong></td>
-<td>Abrar Abousher</td>
-<td><a href="mailto:abrar.abousher@ucf.edu">abrar.abousher@ucf.edu</a></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="course-materials">Course Materials<a class="headerlink" href="#course-materials" title="Permanent link">¶</a></h3>
-<h4 id="required">Required<a class="headerlink" href="#required" title="Permanent link">¶</a></h4>
-<ul>
-<li>None (no required textbook purchase)</li>
-</ul>
-<h4 id="recommended">Recommended<a class="headerlink" href="#recommended" title="Permanent link">¶</a></h4>
-<ul>
-<li><em>C Programming</em> — Wikipedia</li>
-<li><em>The C Programming Language</em> — Kernighan &amp; Ritchie (ISBN: 0131103628)</li>
-</ul>
-<hr/>
-<h3 id="grading-scale">Grading Scale<a class="headerlink" href="#grading-scale" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Grade</th>
-<th>Range</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>90 - 100%</td>
-</tr>
-<tr>
-<td>B</td>
-<td>80 - \&lt;90%</td>
-</tr>
-<tr>
-<td>C</td>
-<td>70 - \&lt;80%</td>
-</tr>
-<tr>
-<td>D</td>
-<td>60 - \&lt;70%</td>
-</tr>
-<tr>
-<td>F</td>
-<td>\&lt;60%</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>No Rounding</li>
-<li>No Grade Bumps</li>
-</ul>
-<hr/>
-<h3 id="grading-breakdown">Grading Breakdown<a class="headerlink" href="#grading-breakdown" title="Permanent link">¶</a></h3>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Weight</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Programming Assignments</td>
-<td><strong>40%</strong></td>
-</tr>
-<tr>
-<td>Midterm Exam</td>
-<td><strong>25%</strong></td>
-</tr>
-<tr>
-<td>Final Exam</td>
-<td><strong>25%</strong></td>
-</tr>
-<tr>
-<td>Quizzes</td>
-<td><strong>10%</strong></td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td><strong>100%</strong></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="programming-assignments-40">Programming Assignments (40%)<a class="headerlink" href="#programming-assignments-40" title="Permanent link">¶</a></h3>
-<ul>
-<li>Assigned at the beginning of each module</li>
-<li><strong>One week</strong> to complete and submit</li>
-<li>Submit <strong><code>.c</code> and <code>.h</code> files only</strong> to Webcourses</li>
-</ul>
-<h4 id="late-penalty">Late Penalty:<a class="headerlink" href="#late-penalty" title="Permanent link">¶</a></h4>
-<table>
-<thead>
-<tr>
-<th>Days Late</th>
-<th>Penalty</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1 day</td>
-<td>−10%</td>
-</tr>
-<tr>
-<td>2 days</td>
-<td>−20%</td>
-</tr>
-<tr>
-<td>3 days</td>
-<td>−30%</td>
-</tr>
-<tr>
-<td>4+ days</td>
-<td><strong>0 (not accepted)</strong></td>
-</tr>
-</tbody>
-</table>
-<hr/>
-<h3 id="exams-50">Exams (50%)<a class="headerlink" href="#exams-50" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>Two exams:</strong> Midterm + Cumulative Final</li>
-<li>Delivered <strong>electronically</strong> at the <strong>Evaluation &amp; Proficiency Center (EPC)</strong></li>
-<li><em>2nd floor, Engineering Building 2</em></li>
-<li>Must <strong>schedule in advance</strong> — no walk-ins</li>
-<li>Required: valid <strong>UCF ID Card</strong></li>
-<li>Format: <strong>Closed Book / Closed Notes</strong></li>
-<li>Instructor-supplied Testing Reference Sheet provided</li>
-</ul>
-<hr/>
-<h3 id="exam-policies">Exam Policies<a class="headerlink" href="#exam-policies" title="Permanent link">¶</a></h3>
-<h4 id="allowed-exceptions-only">Allowed exceptions only:<a class="headerlink" href="#allowed-exceptions-only" title="Permanent link">¶</a></h4>
+<h3 id="prerequisites-for-c-development">Prerequisites for C Development<a class="headerlink" href="#prerequisites-for-c-development" title="Permanent link">¶</a></h3>
 <ol>
-<li>SAS (Student Accessibility Services) authorization</li>
-<li>Medical doctor’s note with excusal period</li>
-<li>Official UCF sanctioned event paperwork</li>
-<li>UCF-announced weather/campus closures</li>
+<li><strong>Extension</strong>: Install the <strong>C/C++ by Microsoft</strong> extension.<br/>
+  - We already installed this in the previous lesson.</li>
+<li><strong>Compiler</strong>: Ensure <code>gcc</code> or <code>clang</code> is available.<br/>
+  - Codespaces usually come with build-essential packages pre-installed.  </li>
+<li><strong>Debugger</strong>: <code>gdb</code> (GNU Debugger) is required for interactive debugging.<br/>
+<br/><br/></li>
 </ol>
 <blockquote>
-<p>Personal emergencies, traffic, parking, job interviews — <strong>not eligible for exceptions</strong></p>
+<p>💡 <em>Check Terminal</em>: Run <code>gcc --version</code> to verify compilation tools are present.  </p>
 </blockquote>
 <hr/>
-<h3 id="quizzes-10">Quizzes (10%)<a class="headerlink" href="#quizzes-10" title="Permanent link">¶</a></h3>
-<ul>
-<li><strong>N pairs</strong> of quizzes planned for the semester</li>
-<li>Each quiz is offered <strong>twice on consecutive weeks</strong></li>
-<li>Score perfectly on week 1? → <strong>Skip week 2</strong></li>
-<li>Otherwise: review misses and retake a similar quiz</li>
-<li><strong>Highest score</strong> of each pair is kept</li>
-<li>Designed to prepare you for exams</li>
-</ul>
+<h3 id="configuring-the-project-structure">Configuring the Project Structure<a class="headerlink" href="#configuring-the-project-structure" title="Permanent link">¶</a></h3>
+<h4 id="vscode-configuration-files"><code>.vscode</code> Configuration Files<a class="headerlink" href="#vscode-configuration-files" title="Permanent link">¶</a></h4>
+<p>To automate C compilation and debugging, create these files in the <code>.vscode</code> directory:  </p>
+<p><strong>1. <code>tasks.json</code> (Build)</strong><br/>
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="p">{</span><span class="w">  </span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0.0"</span><span class="p">,</span><span class="w">  </span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">"tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="p">{</span><span class="w">  </span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">            </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Build C Program"</span><span class="p">,</span><span class="w">  </span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">            </span><span class="nt">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gcc"</span><span class="p">,</span><span class="w">  </span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">                    </span><span class="s2">"-g"</span><span class="p">,</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">                    </span><span class="s2">"hello.c"</span><span class="p">,</span>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">                    </span><span class="s2">"-o"</span><span class="p">,</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                    </span><span class="s2">"hello"</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">            </span><span class="p">],</span><span class="w">  </span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shell"</span><span class="w">  </span>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="p">}</span><span class="w">  </span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="p">}</span>
+</code></pre></div><p></p>
 <hr/>
-<h3 id="ai-use-policy">AI Use Policy<a class="headerlink" href="#ai-use-policy" title="Permanent link">¶</a></h3>
-<h4 id="generative-ai-is-prohibited">⚠️ Generative AI is <strong>PROHIBITED</strong><a class="headerlink" href="#generative-ai-is-prohibited" title="Permanent link">¶</a></h4>
-<p>This includes:</p>
+<p><strong>2. <code>c_cpp_properties.json</code> (IntelliSense)</strong><br/>
+</p><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Linux"</span><span class="p">,</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">            </span><span class="nt">"compilerPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/bin/gcc"</span><span class="p">,</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="nt">"cStandard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c11"</span><span class="p">,</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">            </span><span class="nt">"cppStandard"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c++11"</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">],</span>
+<a href="#__codelineno-1-10" id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+<a href="#__codelineno-1-11" id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="p">}</span>
+</code></pre></div><br/>
+<br/><br/> <p></p>
+<blockquote>
+<p><em>Tip</em>: The <code>gcc -g</code> flag ensures debug symbols are generated for the debugger.  </p>
+</blockquote>
+<hr/>
+<h2 id="setting-up-the-debug-session">Setting Up the Debug Session<a class="headerlink" href="#setting-up-the-debug-session" title="Permanent link">¶</a></h2>
+<h3 id="launchjson-configuration"><code>launch.json</code> Configuration<a class="headerlink" href="#launchjson-configuration" title="Permanent link">¶</a></h3>
+<p>This file tells VS Code how to start the debugger.  </p>
+<p><strong>Location</strong>: <code>.vscode/launch.json</code> </p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">{</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="nt">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">        </span><span class="p">{</span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug C Program"</span><span class="p">,</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cppdbg"</span><span class="p">,</span>
+<a href="#__codelineno-2-7" id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span>
+<a href="#__codelineno-2-8" id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">            </span><span class="nt">"MIMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gdb"</span><span class="p">,</span>
+<a href="#__codelineno-2-9" id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="nt">"miDebuggerPath"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/bin/gdb"</span><span class="p">,</span>
+<a href="#__codelineno-2-10" id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">            </span><span class="nt">"cwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span>
+<a href="#__codelineno-2-11" id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">            </span><span class="nt">"program"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}/hello"</span><span class="p">,</span>
+<a href="#__codelineno-2-12" id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">            </span><span class="nt">"preLaunchTask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Build C Program"</span>
+<a href="#__codelineno-2-13" id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-2-14" id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="p">]</span>
+<a href="#__codelineno-2-15" id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p><strong>Auto-build</strong>: The <code>preLaunchTask</code> compiles your code automatically before attaching the debugger.  </p>
+</blockquote>
+<hr/>
+<h2 id="interactive-debugging-workflow">Interactive Debugging Workflow<a class="headerlink" href="#interactive-debugging-workflow" title="Permanent link">¶</a></h2>
+<h3 id="5-steps-to-debug-c-code">5 Steps to Debug C Code<a class="headerlink" href="#5-steps-to-debug-c-code" title="Permanent link">¶</a></h3>
+<ol>
+<li><strong>Set Breakpoints</strong>: Click the gutter next to lines in <code>main.c</code>.<br/>
+  - Red dot = active breakpoint.  </li>
+<li><strong>Start Debugging</strong>: Press <code>F5</code> or click “Run and Debug”.  </li>
+<li><strong>Step Over/Into</strong>: Use <code>Step Over</code> (F10) or <code>Step Into</code> (F11).  </li>
+<li><strong>Inspect Variables</strong>: Hover over pointers, structs, or arrays.  </li>
+<li><strong>Call Stack</strong>: View the execution path and return addresses.  </li>
+</ol>
+<blockquote>
+<p><strong>Pointer Warning</strong>: When debugging pointers, ensure you inspect the address (<code>&amp;var</code>) vs the value (<code>var</code>).  </p>
+</blockquote>
+<hr/>
+<h2 id="git-integration-for-c-projects">Git Integration for C Projects<a class="headerlink" href="#git-integration-for-c-projects" title="Permanent link">¶</a></h2>
+<h3 id="managing-source-control-in-codespaces">Managing Source Control in Codespaces<a class="headerlink" href="#managing-source-control-in-codespaces" title="Permanent link">¶</a></h3>
 <ul>
-<li>GitHub Copilot, Claude Code, Cursor, Codex</li>
-<li>ChatGPT, Claude, Gemini, and similar chatbots</li>
-<li>Any AI tool that generates or suggests code</li>
+<li><strong>Untracked Files</strong>: New C files (<code>main.c</code>, <code>debug.h</code>) are marked as <code>Untracked</code>.  </li>
+<li><strong>Staging</strong>: Stage changes via Source Control panel or <code>git add main.c</code>.  </li>
+<li><strong>Commit</strong>:<br/>
+ <code>bash  
+&amp;emsp;git commit -m "fix: null pointer in memory allocation"  
+&amp;emsp;</code><br/>
+ <br/> <br/> </li>
+<li><strong>Push</strong>:<br/>
+ <code>bash  
+&amp;emsp;git push
+&amp;emsp;</code><br/>
+<br/><br/></li>
 </ul>
 <blockquote>
-<p>Violations are treated as <strong>academic misconduct</strong> and will result in a failing grade and conduct report.</p>
+<p><strong>Tip</strong>: Codespaces automatically syncs your working tree. If you break your code, you can <code>git checkout</code> to revert.  </p>
 </blockquote>
 <hr/>
-<h3 id="why-no-ai">Why No AI?<a class="headerlink" href="#why-no-ai" title="Permanent link">¶</a></h3>
+<h1 id="common-pitfalls">⚠ Common Pitfalls<a class="headerlink" href="#common-pitfalls" title="Permanent link">¶</a></h1>
+<h2 id="troubleshooting-c-debugging">Troubleshooting C Debugging<a class="headerlink" href="#troubleshooting-c-debugging" title="Permanent link">¶</a></h2>
 <ol>
-<li><strong>Skill Development</strong> — Build fundamentals before relying on tools</li>
-<li><strong>Plagiarism Risk</strong> — AI-generated code may be flagged</li>
-<li><strong>Learning Integrity</strong> — Understanding &gt; shortcuts</li>
+<li><strong>No Symbols</strong>: Ensure <code>-g</code> flag is used during compilation.<br/>
+  - <em>Fix</em>: Update <code>tasks.json</code> to include <code>-g</code>.  </li>
+<li><strong>GDB Path</strong>: Sometimes <code>gdb</code> isn’t linked in <code>launch.json</code>.<br/>
+  - <em>Fix</em>: Verify path with <code>which gdb</code>.  </li>
+<li><strong>Port Forwarding</strong>: If your C program creates a server socket, forward the port.<br/>
+  - <em>Fix</em>: Go to <code>Port Status</code> and click the “Open in Browser” icon.  </li>
+<li><strong>Async Code</strong>: Debug async C programs requires specific configurations.<br/>
+  - <em>Fix</em>: Use <code>Thread</code> debugger options for multi-threaded C apps.  </li>
 </ol>
-<p><em>If you’re unsure whether a tool is permitted, ask the instructor </em><em>before</em><em> using it.</em></p>
 <hr/>
-<h3 id="communication-tips">Communication Tips<a class="headerlink" href="#communication-tips" title="Permanent link">¶</a></h3>
+<h2 id="summary-next-steps">Summary &amp; Next Steps<a class="headerlink" href="#summary-next-steps" title="Permanent link">¶</a></h2>
+<h3 id="recap">Recap<a class="headerlink" href="#recap" title="Permanent link">¶</a></h3>
 <ul>
-<li>✅ Email via <strong>Outlook</strong> (not Canvas messages)</li>
-<li>✅ Include <strong>COP 3223C</strong> in subject line</li>
-<li>✅ Watch <strong>Webcourses announcements</strong> — missing one is not an excuse</li>
-<li>⏰ Replies within 2 business days (weekdays before 5 PM)</li>
-<li>🚫 No weekend replies</li>
+<li><strong>Extension</strong>: Use C/C++ extension by Microsoft.  </li>
+<li><strong>Build</strong>: Configure <code>tasks.json</code> with <code>gcc -g</code>.  </li>
+<li><strong>Debug</strong>: Configure <code>launch.json</code> with GDB.  </li>
+<li><strong>Git</strong>: Commit changes to sync with GitHub.  </li>
 </ul>
 <hr/>
-<h3 id="religious-observances-university-events">Religious Observances &amp; University Events<a class="headerlink" href="#religious-observances-university-events" title="Permanent link">¶</a></h3>
-<ul>
-<li>Notify instructor <strong>as soon as possible</strong> in advance</li>
-<li>Student athletes: provide <strong>Program Verification Form</strong> before absence</li>
-<li>Religious observances: reasonable time to make up missed work</li>
-<li>See UCF Policy 4-401 and UCF Regulation 5-020</li>
-</ul>
-<hr/>
-<h3 id="unexpected-campus-closures">Unexpected Campus Closures<a class="headerlink" href="#unexpected-campus-closures" title="Permanent link">¶</a></h3>
-<blockquote>
-<p>In the event of hurricanes, tropical storms, or other emergency closures:</p>
-</blockquote>
-<ul>
-<li>No deadlines enforced during closure</li>
-<li>Schedule and due dates <strong>re-evaluated</strong> when campus reopens</li>
-</ul>
-<hr/>
-<h3 id="what-youll-learn">What You’ll Learn<a class="headerlink" href="#what-youll-learn" title="Permanent link">¶</a></h3>
+<h2 id="our-challenge">Our Challenge<a class="headerlink" href="#our-challenge" title="Permanent link">¶</a></h2>
 <ol>
-<li>Set up C development environments &amp; use <code>git</code></li>
-<li>Write complete C programs with headers &amp; preprocessor directives</li>
-<li>Use standard libraries: <code>stdio</code>, <code>stdlib</code>, <code>math</code>, <code>string</code>, <code>time</code></li>
-<li>Apply conditional statements, loops, and functions</li>
-<li>Work with <strong>pointers</strong>, <strong>arrays</strong>, and <strong>strings</strong></li>
+<li>Write a C program with a loop.  </li>
+<li>Set a breakpoint inside the loop.  </li>
+<li>Debug until you find the off-by-one error.  </li>
+<li>Commit and push to GitHub.</li>
 </ol>
-<hr/>
-<h3 id="what-youll-learn-cont">What You’ll Learn (cont.)<a class="headerlink" href="#what-youll-learn-cont" title="Permanent link">¶</a></h3>
-<ol start="6">
-<li>Perform file I/O for data persistence</li>
-<li>Define and use <strong>structs</strong></li>
-<li>Apply <strong>dynamic memory management</strong> (<code>malloc</code> / <code>free</code>)</li>
-<li>Implement complex data structures like <strong>linked lists</strong></li>
-<li>Follow C style conventions and best practices</li>
-</ol>
-<hr/>
-<h2 id="lets-get-started">Let’s Get Started<a class="headerlink" href="#lets-get-started" title="Permanent link">¶</a></h2>
-<h4 id="cop-3223c-introduction-to-programming-with-c">COP 3223C — Introduction to Programming with C<a class="headerlink" href="#cop-3223c-introduction-to-programming-with-c" title="Permanent link">¶</a></h4>
-<p><strong>Summer 2026</strong></p>
-<p>Questions? Email: <a href="mailto:John.Aedo@ucf.edu">John.Aedo@ucf.edu</a><br/>
-<em>(Include COP 3223C in the subject line)</em></p>
 <hr/>
 <div class="md-source-file">
 <small>
 <!-- mkdocs-git-revision-date-localized-plugin -->
 <u>Last update</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 13, 2026 12:42:47 UTC">May 13, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 31, 2026 22:32:35 UTC">May 31, 2026</span>
 <!-- mkdocs-git-revision-date-plugin -->
 <br/>
 <u>Created</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 13, 2026 00:05:21 UTC">May 13, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 13, 2026 01:22:40 UTC">May 13, 2026</span>
 </small>
 </div>
 <!-- Was this page helpful? -->
@@ -1402,7 +976,7 @@
     try {
       const index = document.querySelector('h1').innerHTML;
       if (index === "Index") {
-        document.querySelector('h1').innerHTML = "Lesson 1 1   Introduction to COP 3223C";
+        document.querySelector('h1').innerHTML = "Lesson 1c   Debugging C in GitHub Codespaces";
       }
     } catch (error) {
       // console.log(error);
