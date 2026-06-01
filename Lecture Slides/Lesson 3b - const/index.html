@@ -4,12 +4,12 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Course notes, code demos, and tutorials" name="description"/>
 <meta content="Dr. John Aedo" name="author"/>
-<link href="https://teaching.johnaedo.com/cop3223c/Supplementary%20Material/Intro%20to%20Programming%20with%20C%20with%20Annika/" rel="canonical"/>
-<link href="../%2B%2B%20Operator/" rel="prev"/>
-<link href="../../blog/" rel="next"/>
+<link href="https://teaching.johnaedo.com/cop3223c/Lecture%20Slides/Lesson%203b%20-%20const/" rel="canonical"/>
+<link href="../Lesson%203/" rel="prev"/>
+<link href="../Lesson%204a/" rel="next"/>
 <link href="../../_assets/meta/favicons.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.6" name="generator"/>
-<title>Intro to Programming with C with Annika - COP 3223C - Introduction to Programming in C</title>
+<title>Lesson 3b const - COP 3223C - Introduction to Programming in C</title>
 <link href="../../assets/stylesheets/main.484c7ddc.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -30,11 +30,11 @@
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" property="og:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" name="twitter:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/" name="site_url"/>
-<meta content="Intro to Programming with C with Annika" property="og:title"/>
-<meta content="Intro to Programming with C with Annika" name="twitter:title"/>
+<meta content="Lesson 3b   const" property="og:title"/>
+<meta content="Lesson 3b   const" name="twitter:title"/>
 <meta content="Course notes, code demos, and tutorials" name="og:description"/>
 <meta content="Course notes, code demos, and tutorials" name="twitter:description"/>
-<script> document.title = "Intro to Programming with C with Annika" </script>
+<script> document.title = "Lesson 3b   const" </script>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -75,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Intro to Programming with C with Annika
+              Lesson 3b   const
             
           </span>
 </div>
@@ -145,8 +145,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="../../Lecture%20Slides/Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -154,8 +154,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href="../%2B%2B%20Operator/">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../Supplementary%20Material/%2B%2B%20Operator/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -224,23 +224,23 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
-<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Lecture Slides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_3">
 <span class="md-nav__icon md-icon"></span>
             Lecture Slides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
+<a class="md-nav__link" href="../Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1a   Introduction to COP 3223C
@@ -248,7 +248,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Lesson%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1b   Introduction to GitHub Codespaces
@@ -256,7 +256,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1c   Debugging C in GitHub Codespaces
@@ -264,7 +264,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%202/">
+<a class="md-nav__link" href="../Lesson%202/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 2
@@ -272,52 +272,10 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%203/">
+<a class="md-nav__link" href="../Lesson%203/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 3
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%203b%20-%20const/">
-<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
-<span class="md-ellipsis">
-    Lesson 3b   const
-  </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../../Lecture%20Slides/Lesson%204a/">
-<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
-<span class="md-ellipsis">
-    Lesson 4a
-  </span>
-</a>
-</li>
-</ul>
-</nav>
-</li>
-<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
-<svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
-<span class="md-ellipsis">
-    Supplementary Material
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
-<label class="md-nav__title" for="__nav_4">
-<span class="md-nav__icon md-icon"></span>
-            Supplementary Material
-          </label>
-<ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="../%2B%2B%20Operator/">
-<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
-<span class="md-ellipsis">
-    ++ Operator
   </span>
 </a>
 </li>
@@ -326,14 +284,14 @@
 <label class="md-nav__link md-nav__link--active" for="__toc">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
-    Intro to Programming with C with Annika
+    Lesson 3b   const
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
-    Intro to Programming with C with Annika
+    Lesson 3b   const
   </span>
 </a>
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -343,16 +301,152 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#intro-to-programming-with-c-with-annika">
+<a class="md-nav__link" href="#const-in-c">
 <span class="md-ellipsis">
       
-        Intro to Programming With C with Annika
+        const in C
+      
+    </span>
+</a>
+<nav aria-label="const in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-const-means">
+<span class="md-ellipsis">
+      
+        What const Means
       
     </span>
 </a>
 </li>
 </ul>
 </nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-vs-define">
+<span class="md-ellipsis">
+      
+        const vs. #define
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preprocessor-text-substitution-define-max_size-100-typed-scoped-variable-const-int-max_size-100">
+<span class="md-ellipsis">
+      
+        // preprocessor text substitution #define MAX_SIZE 100 // typed, scoped variable const int max_size = 100;
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-in-function-parameters">
+<span class="md-ellipsis">
+      
+        const in Function Parameters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-const-on-a-pointer-parameter-buys-you">
+<span class="md-ellipsis">
+      
+        What const on a Pointer Parameter Buys You
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-int-high_score-9999-fine-function-promises-not-to-modify-it-print_scorehigh_score">
+<span class="md-ellipsis">
+      
+        const int high_score = 9999; // fine — function promises not to modify it print_score(&amp;high_score);
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-two-positions-of-const-with-pointers">
+<span class="md-ellipsis">
+      
+        The Two Positions of const with Pointers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-practical-rules">
+<span class="md-ellipsis">
+      
+        The Practical Rules
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference">
+<span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#named-constant-use-instead-of-define-const-double-pi-314159-read-only-pointer-parameter-function-will-not-modify-what-p-points-to-void-fconst-int-p-read-only-array-parameter-same-thing-array-syntax-void-gconst-int-arr-int-len-read-only-string-parameter-standard-for-string-functions-void-hconst-char-s-both-pointer-and-value-fixed-rare-const-int-const-p-x">
+<span class="md-ellipsis">
+      
+        // Named constant — use instead of #define const double PI = 3.14159; // Read-only pointer parameter // — function will not modify what p points to void f(const int *p); // Read-only array parameter // — same thing, array syntax void g(const int arr[], int len); // Read-only string parameter // — standard for string functions void h(const char *s); // Both pointer and value fixed — rare const int *const p = &amp;x;
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Lesson%204a/">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    Lesson 4a
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
+<span class="md-ellipsis">
+    Supplementary Material
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Supplementary Material
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Supplementary%20Material/%2B%2B%20Operator/">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    ++ Operator
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Supplementary%20Material/Intro%20to%20Programming%20with%20C%20with%20Annika/">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    Intro to Programming with C with Annika
+  </span>
+</a>
 </li>
 </ul>
 </nav>
@@ -402,10 +496,104 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#intro-to-programming-with-c-with-annika">
+<a class="md-nav__link" href="#const-in-c">
 <span class="md-ellipsis">
       
-        Intro to Programming With C with Annika
+        const in C
+      
+    </span>
+</a>
+<nav aria-label="const in C" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-const-means">
+<span class="md-ellipsis">
+      
+        What const Means
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-vs-define">
+<span class="md-ellipsis">
+      
+        const vs. #define
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#preprocessor-text-substitution-define-max_size-100-typed-scoped-variable-const-int-max_size-100">
+<span class="md-ellipsis">
+      
+        // preprocessor text substitution #define MAX_SIZE 100 // typed, scoped variable const int max_size = 100;
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-in-function-parameters">
+<span class="md-ellipsis">
+      
+        const in Function Parameters
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-const-on-a-pointer-parameter-buys-you">
+<span class="md-ellipsis">
+      
+        What const on a Pointer Parameter Buys You
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#const-int-high_score-9999-fine-function-promises-not-to-modify-it-print_scorehigh_score">
+<span class="md-ellipsis">
+      
+        const int high_score = 9999; // fine — function promises not to modify it print_score(&amp;high_score);
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-two-positions-of-const-with-pointers">
+<span class="md-ellipsis">
+      
+        The Two Positions of const with Pointers
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#the-practical-rules">
+<span class="md-ellipsis">
+      
+        The Practical Rules
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#quick-reference">
+<span class="md-ellipsis">
+      
+        Quick Reference
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#named-constant-use-instead-of-define-const-double-pi-314159-read-only-pointer-parameter-function-will-not-modify-what-p-points-to-void-fconst-int-p-read-only-array-parameter-same-thing-array-syntax-void-gconst-int-arr-int-len-read-only-string-parameter-standard-for-string-functions-void-hconst-char-s-both-pointer-and-value-fixed-rare-const-int-const-p-x">
+<span class="md-ellipsis">
+      
+        // Named constant — use instead of #define const double PI = 3.14159; // Read-only pointer parameter // — function will not modify what p points to void f(const int *p); // Read-only array parameter // — same thing, array syntax void g(const int arr[], int len); // Read-only string parameter // — standard for string functions void h(const char *s); // Both pointer and value fixed — rare const int *const p = &amp;x;
       
     </span>
 </a>
@@ -444,87 +632,165 @@
   Hack: check whether the content contains a h1 headline. If it doesn't, the
   page title (or respectively site name) is used as the main headline.
 -->
-<h1>Intro to Programming with C with Annika</h1>
+<h1>Lesson 3b   const</h1>
 <!-- Page content -->
-<h2 id="intro-to-programming-with-c-with-annika">Intro to Programming With C with Annika<a class="headerlink" href="#intro-to-programming-with-c-with-annika" title="Permanent link">¶</a></h2>
+<h2 id="const-in-c"><code>const</code> in C<a class="headerlink" href="#const-in-c" title="Permanent link">¶</a></h2>
+<hr/>
+<h3 id="what-const-means">What <code>const</code> Means<a class="headerlink" href="#what-const-means" title="Permanent link">¶</a></h3>
+<p><code>const</code> tells the compiler that a value <strong>must not be modified</strong> after it is initialized.</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265358979</span><span class="p">;</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="c1">// compile error — assignment to a const variable</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span><span class="w">   </span>
+</code></pre></div>
+<p>That’s the whole idea. Everything else is a consequence of it.</p>
+<hr/>
+<h2 id="const-vs-define"><code>const</code> vs. <code>#define</code><a class="headerlink" href="#const-vs-define" title="Permanent link">¶</a></h2>
+<p>Both are used for named constants. They are not the same thing.</p>
+<h2 id="preprocessor-text-substitution-define-max_size-100-typed-scoped-variable-const-int-max_size-100"><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// preprocessor text substitution</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cp">#define MAX_SIZE 100        </span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// typed, scoped variable</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">max_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">   </span>
+</code></pre></div><a class="headerlink" href="#preprocessor-text-substitution-define-max_size-100-typed-scoped-variable-const-int-max_size-100" title="Permanent link">¶</a></h2>
 <table>
 <thead>
 <tr>
 <th></th>
-<th></th>
-<th></th>
+<th><strong class="hash" id="define">define</strong></th>
+<th>const variable</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Session Day</td>
-<td>Session Time</td>
-<td>Session Location</td>
+<td>Has a type</td>
+<td>No — raw text replacement</td>
+<td>Yes — <code>int</code>, <code>double</code>, etc.</td>
 </tr>
 <tr>
-<td>Monday</td>
-<td>1:00 – 1:50 PM</td>
-<td><a href="https://web.penjiapp.com/communities/TC2qcAUi9K/join-event">NSC 102</a></td>
+<td>Visible to debugger</td>
+<td>No</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Tuesday</td>
-<td>11:00 – 11:50 AM</td>
-<td><a href="https://web.penjiapp.com/communities/TC2qcAUi9K/join-event">NSC 210</a></td>
+<td>Obeys scope</td>
+<td>No — file-wide once defined</td>
+<td>Yes — block or file scope</td>
 </tr>
 <tr>
-<td>Wednesday</td>
-<td>1:00 – 1:50 PM</td>
-<td><a href="https://web.penjiapp.com/communities/TC2qcAUi9K/join-event">NSC 102</a></td>
+<td>Can be watched in debugger</td>
+<td>No</td>
+<td>Yes</td>
 </tr>
 <tr>
-<td>Thursday</td>
-<td>5:00 – 5:50 PM</td>
-<td><a href="https://web.penjiapp.com/communities/TC2qcAUi9K/join-event">Zoom</a></td>
+<td>Accidentally misused</td>
+<td><code>#define SQ(x) x*x</code> → <code>SQ(1+2)</code> = 5</td>
+<td>Not possible</td>
 </tr>
 </tbody>
 </table>
-<p><a href="https://docs.google.com/document/d/1m8kfJVabz7XEEmkh0F_Zy8pt5hHv4H3n1RWGsfKWXDc/">HOW TO JOIN AN SI SESSION</a></p>
-<table>
-<thead>
-<tr>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>✮⋆˙ WELCOME!! ✮⋆˙</strong></td>
-</tr>
-</tbody>
-</table>
-<p>⊹˚. ♡.𖥔 ݁ ˖ <strong>Hi, I’m Annika (Kai for short, if you prefer)!</strong> I am a Comp. Sci. major with a Creative Writing minor. This is my 3rd semester at UCF, so while I am <em>technically</em> still a freshman, I’ve been here a while and know some of the tools’n’trades. I am also a student of the Burnett Honors College, and part of many clubs such as d20Knights, Honors Congress, KnightHacks, the Video Game Music Ensemble, and more!</p>
-<p>⊹˚. ♡.𖥔 ݁ ˖ <strong>If you don’t know what SI is or how it works, let me give you a little outline.</strong> As an SI leader, my job is to help you learn <em>how to learn</em> the material. We will work together to help you learn how to tackle problems and how <em>you</em> can prove your answer is right through referencing your notes, slides, and other resources. Although I cannot directly answer questions or confirm answers, I am more than happy to help you figure out how to solve it — that’s my job, after all!</p>
-<table>
-<thead>
-<tr>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>✮⋆˙ RESOURCES</strong> <strong>✮⋆˙</strong></td>
-</tr>
-</tbody>
-</table>
-<p><a href="https://docs.google.com/document/d/1lbhcr7qfUPhAq5glD_0Nl_-ZitsbAL0-OZuGkFyt2Lc/">HOW TO GET STUDENT DEVELOPER ACCESS IN GITHUB</a></p>
-<p><a href="https://www.youtube.com/watch?v=rl7YjqG3I9k">HOW TO MAKE A CODESPACE IN A REPOSITORY IN GITHUB</a></p>
-<p>⊹˚. ♡.𖥔 ݁ ˖ <a href="https://www.geeksforgeeks.org/explore?page=1&amp;sortBy=submissions"><strong>Geeks4Geeks Practice Questions</strong></a> – A great website to use for coding practice! You can compile and run code within the website itself if you make a free account. You can also just look at them without signing in if you’d like. Reviewing the problems, I would say the Basic and Easy level problems are solvable with Intro to C level knowledge.</p>
-<p>⊹˚. ♡.𖥔 ݁ ˖ <strong>AI (Claude specifically)</strong> – While you should <strong>NEVER</strong> use AI for the purpose of finding answers, a fellow SI leader told me that Claude’s model is <em>generally</em> <em>decent</em> at creating practice problems – although the chances of it getting something wrong/hallucinating aren’t zero. Just be wary!</p>
-<p>⊹˚. ♡.𖥔 ݁ ˖ <strong><a href="https://www.cs.ucf.edu/~dmarino/ucf/transparency/cop3223/">Dr. Guha’s Website</a></strong> – It might not be as pretty as the other options nor does it have solutions to double check your work against, but Dr. Guha’s website is an excellent resource for more problems. I would recommend checking out every hyperlink here – the “Friday Problems” are good, shorter problems whereas the assignments are more like, well, <em>assignments</em>. Just ignore the .py problems as we aren’t using Python in this course (Very sad, I know.) Another reason I would recommend his website is he is like, <strong>THE GUY who makes assignments for CS1</strong> courses <strong>AND problems for the Foundation Exam!</strong> This is the closest you can get to the style of questions you’ll see in the future, but about subjects you are currently learning!</p>
+<blockquote>
+<p><strong>Prefer <code>const</code> variables</strong> over <code>#define</code> for numeric and typed constants. Reserve <code>#define</code> for include guards and macros.</p>
+</blockquote>
+<hr/>
+<h2 id="const-in-function-parameters"><code>const</code> in Function Parameters<a class="headerlink" href="#const-in-function-parameters" title="Permanent link">¶</a></h2>
+<p>When a function receives a value by copy, <code>const</code> on a value parameter is unusual — it just means the function cannot reassign its own local copy. More useful and common is <code>const</code> on a <strong>pointer parameter</strong>:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// Without const — caller can't tell if their data is safe</span>
+<a href="#__codelineno-2-2" id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_score</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">score</span><span class="p">);</span>
+<a href="#__codelineno-2-3" id="__codelineno-2-3" name="__codelineno-2-3"></a>
+<a href="#__codelineno-2-4" id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="c1">// With const — compiler guarantees the function </span>
+<a href="#__codelineno-2-5" id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">// won't modify *score</span>
+<a href="#__codelineno-2-6" id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_score</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">score</span><span class="p">);</span>
+</code></pre></div>
+<p><code>const int *score</code> means: “I receive an address, but I promise only to read through it.”</p>
+<hr/>
+<h2 id="what-const-on-a-pointer-parameter-buys-you">What <code>const</code> on a Pointer Parameter Buys You<a class="headerlink" href="#what-const-on-a-pointer-parameter-buys-you" title="Permanent link">¶</a></h2>
+<p><strong>For the caller:</strong> safety. You can pass a <code>const</code> variable or a literal without a cast.</p>
+<h2 id="const-int-high_score-9999-fine-function-promises-not-to-modify-it-print_scorehigh_score"><div class="highlight"><pre><span></span><code><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">high_score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">9999</span><span class="p">;</span>
+<a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// fine — function promises not to modify it</span>
+<a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">print_score</span><span class="p">(</span><span class="o">&amp;</span><span class="n">high_score</span><span class="p">);</span><span class="w">   </span>
+</code></pre></div><a class="headerlink" href="#const-int-high_score-9999-fine-function-promises-not-to-modify-it-print_scorehigh_score" title="Permanent link">¶</a></h2>
+<p><strong>For the reader:</strong> documentation. A <code>const</code> pointer parameter immediately signals “this is an input, not an output.”</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Output params have no const — they will be written to</span>
+<a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">compute</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">output</span><span class="p">);</span>
+<a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="c1">//           ^— read only      ^— will be modified</span>
+</code></pre></div>
+<p><strong>For the compiler:</strong> enforcement. Any attempt to write through a <code>const</code> pointer is a compile error — caught before the program ever runs.</p>
+<hr/>
+<h2 id="the-two-positions-of-const-with-pointers">The Two Positions of <code>const</code> with Pointers<a class="headerlink" href="#the-two-positions-of-const-with-pointers" title="Permanent link">¶</a></h2>
+<p>This is covered in detail in the Week 4 Pointers lecture. As a preview:</p>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w">      </span><span class="c1">// pointer to const int</span>
+<a href="#__codelineno-5-2" id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">                   </span><span class="c1">// → cannot change *p (the value)</span>
+<a href="#__codelineno-5-3" id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">                   </span><span class="c1">// → can change p  (the address)</span>
+<a href="#__codelineno-5-4" id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a href="#__codelineno-5-5" id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w">      </span><span class="c1">// const pointer to int</span>
+<a href="#__codelineno-5-6" id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">                   </span><span class="c1">// → can change *p  (the value)</span>
+<a href="#__codelineno-5-7" id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">                   </span><span class="c1">// → cannot change p (the address)</span>
+<a href="#__codelineno-5-8" id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a href="#__codelineno-5-9" id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="c1">// both are fixed</span>
+</code></pre></div>
+<p>The first form — <strong>pointer to <code>const</code></strong> — is what you will use in nearly every function parameter. It means “read-only access through this pointer.”</p>
+<p>The second form — <strong><code>const</code> pointer</strong> — is rare in practice; it appears mainly in fixed-address hardware registers and similar low-level contexts.</p>
+<hr/>
+<h2 id="the-practical-rules">The Practical Rules<a class="headerlink" href="#the-practical-rules" title="Permanent link">¶</a></h2>
+<ol>
+<li><strong>Named numeric constants:</strong> use <code>const</code> instead of <code>#define</code><br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">MAX_PLAYERS</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+<a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">GRAVITY</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span>
+</code></pre></div></li>
+</ol>
+<hr/>
+<ol start="2">
+<li><strong>String parameters a function only reads:</strong> use <code>const char *</code><br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">greet</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">name</span><span class="p">);</span>
+<a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">log_message</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">msg</span><span class="p">);</span>
+</code></pre></div></li>
+</ol>
+<hr/>
+<ol start="3">
+<li><strong>Any pointer parameter a function only reads:</strong> add <code>const</code><br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">double</span><span class="w"> </span><span class="nf">average</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a href="#__codelineno-8-2" id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kt">int</span><span class="w">    </span><span class="nf">str_length</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
+</code></pre></div></li>
+</ol>
+<hr/>
+<ol start="4">
+<li><strong>Output pointer parameters:</strong> no <code>const</code> — the function needs to write through them<br/>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">min_max</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">out_min</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">out_max</span><span class="p">);</span>
+<a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="c1">//           ^— read only             ^— will be written</span>
+</code></pre></div></li>
+</ol>
+<hr/>
+<h2 id="quick-reference">Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">¶</a></h2>
+<h2 id="named-constant-use-instead-of-define-const-double-pi-314159-read-only-pointer-parameter-function-will-not-modify-what-p-points-to-void-fconst-int-p-read-only-array-parameter-same-thing-array-syntax-void-gconst-int-arr-int-len-read-only-string-parameter-standard-for-string-functions-void-hconst-char-s-both-pointer-and-value-fixed-rare-const-int-const-p-x"><div class="highlight"><pre><span></span><code><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">// Named constant — use instead of #define</span>
+<a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+<a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="c1">// Read-only pointer parameter </span>
+<a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="c1">// — function will not modify what p points to</span>
+<a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
+<a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="c1">// Read-only array parameter </span>
+<a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="c1">// — same thing, array syntax</span>
+<a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">len</span><span class="p">);</span>
+<a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a>
+<a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="c1">// Read-only string parameter </span>
+<a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="c1">// — standard for string functions</span>
+<a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">h</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">);</span>
+<a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a>
+<a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="c1">// Both pointer and value fixed — rare</span>
+<a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="k">const</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">x</span><span class="p">;</span>
+</code></pre></div><a class="headerlink" href="#named-constant-use-instead-of-define-const-double-pi-314159-read-only-pointer-parameter-function-will-not-modify-what-p-points-to-void-fconst-int-p-read-only-array-parameter-same-thing-array-syntax-void-gconst-int-arr-int-len-read-only-string-parameter-standard-for-string-functions-void-hconst-char-s-both-pointer-and-value-fixed-rare-const-int-const-p-x" title="Permanent link">¶</a></h2>
+<blockquote>
+<p><strong>The one-sentence rule:</strong> put <code>const</code> on anything that should not change. Let the compiler enforce it.</p>
+</blockquote>
 <hr/>
 <div class="md-source-file">
 <small>
 <!-- mkdocs-git-revision-date-localized-plugin -->
 <u>Last update</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 1, 2026 13:03:09 UTC">June 1, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 1, 2026 13:29:56 UTC">June 1, 2026</span>
 <!-- mkdocs-git-revision-date-plugin -->
 <br/>
 <u>Created</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 28, 2026 14:16:04 UTC">May 28, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 1, 2026 13:29:56 UTC">June 1, 2026</span>
 </small>
 </div>
 <!-- Was this page helpful? -->
@@ -533,7 +799,7 @@
     try {
       const index = document.querySelector('h1').innerHTML;
       if (index === "Index") {
-        document.querySelector('h1').innerHTML = "Intro to Programming with C with Annika";
+        document.querySelector('h1').innerHTML = "Lesson 3b   const";
       }
     } catch (error) {
       // console.log(error);
