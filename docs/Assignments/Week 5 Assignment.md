@@ -4,7 +4,7 @@ site-folder: docs/Assignments
 ---
 
 # Week 5 Assignment — Student Roster System
-### Assigned: Monday | Due: Sunday 11:59 PM
+### Assigned: Monday | Due: Sunday 6/21 11:59 PM
 ### Points: 100 | 80 pts automated + 20 pts manual
 
 ---
@@ -42,7 +42,7 @@ typedef enum {
     GRADE_C,
     GRADE_D,
     GRADE_F,
-    GRADE_INCOMPLETE
+    GRADE_INVALID
 } Grade;
 ```
 
@@ -86,6 +86,8 @@ Returns a fully initialized `Student`. Derive `standing` from `gpa`:
 | 2.0 – 2.99 | `GRADE_C` |
 | 1.0 – 1.99 | `GRADE_D` |
 | < 1.0 | `GRADE_F` |
+
+If the student has a blank GPA or a GPA that's out of range (i.e. < 0 or > 4.0), the standing is `GRADE_INVALID`
 
 ### Roster management
 
