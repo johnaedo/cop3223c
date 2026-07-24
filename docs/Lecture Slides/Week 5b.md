@@ -39,13 +39,15 @@ Enemy *p     = &goblin;
 `p` holds the address of `goblin`. Dereferencing gives back the whole struct:
 
 ```c
-(*p).hp = 30;   // dereference p, then access .hp
+// dereference p, then access .hp
+(*p).hp = 30;   
 ```
 
 This works — but the parentheses are required because `.` binds tighter than `*`. Without them:
 
 ```c
-*p.hp   // parsed as *(p.hp) — wrong, and a compile error
+// parsed as *(p.hp) — wrong, and a compile error
+*p.hp   
 ```
 
 ---
@@ -291,7 +293,8 @@ Enemy *find_enemy(Enemy enemies[], int count, const char *name) {
 Enemy *target = find_enemy(dungeon, 3, "Orc");
 if (target != NULL) {
     printf("Found: %s\n", target->name);
-    apply_damage(target, 15);   // modifies the array element in place
+    // modifies the array element in place
+    apply_damage(target, 15);   
 }
 ```
 

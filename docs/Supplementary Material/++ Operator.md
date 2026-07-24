@@ -39,11 +39,11 @@ int main() {
 
    // 5 is displayed
    // Then, var1 is increased to 6.
-   printf("%d\n", var1++);
+   printf("current value: %d\tvalue returned by postfix increment: %d\n", var1, var1++);
 
    // var2 is increased to 6 
    // Then, it is displayed.
-   printf("%d\n", ++var2);
+   printf("current value: %d\tvalue returned by prefix increment: %d\n", var2, ++var2);
 
    return 0;
 }
