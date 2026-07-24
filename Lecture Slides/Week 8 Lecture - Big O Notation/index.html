@@ -4,22 +4,23 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Course notes, code demos, and tutorials" name="description"/>
 <meta content="Dr. John Aedo" name="author"/>
-<link href="https://teaching.johnaedo.com/cop3223c/" rel="canonical"/>
-<link href="Assignments/Week%205%20Assignment/" rel="next"/>
-<link href="_assets/meta/favicons.svg" rel="icon"/>
+<link href="https://teaching.johnaedo.com/cop3223c/Lecture%20Slides/Week%208%20Lecture%20-%20Big%20O%20Notation/" rel="canonical"/>
+<link href="../Week%208%20Lab%20-%20Linked%20Lists/" rel="prev"/>
+<link href="../Week%208%20Lecture%20-%20Linked%20Lists%20v2/" rel="next"/>
+<link href="../../_assets/meta/favicons.svg" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.7.7" name="generator"/>
-<title>COP 3223C - Introduction to Programming in C</title>
-<link href="assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
-<link href="assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
+<title>Week 8 Lecture Big O Notation - COP 3223C - Introduction to Programming in C</title>
+<link href="../../assets/stylesheets/main.ec1eaa64.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.ab4e12ef.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Karla:300,300i,400,400i,700,700i%7CUbuntu+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
 <style>:root{--md-text-font:"Karla";--md-code-font:"Ubuntu Mono"}</style>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
-<link href="_static/css/admonition.css" rel="stylesheet"/>
-<link href="_static/css/custom_attributes.css" rel="stylesheet"/>
-<link href="_static/css/customization.css" rel="stylesheet"/>
+<link href="../../_static/css/admonition.css" rel="stylesheet"/>
+<link href="../../_static/css/custom_attributes.css" rel="stylesheet"/>
+<link href="../../_static/css/customization.css" rel="stylesheet"/>
 <link href="https://cdn.jsdelivr.net/gh/Enveloppe/_static@refs/heads/master/dist/styles.css" rel="stylesheet"/>
-<script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
 <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 <link href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" rel="stylesheet"/>
@@ -29,12 +30,12 @@
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" property="og:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/_assets/meta/logo.svg" name="twitter:image"/>
 <meta content="https://teaching.johnaedo.com/cop3223c/" name="site_url"/>
-<meta content="COP 3223C - Introduction to Programming in C" property="og:title"/>
-<meta content="COP 3223C - Introduction to Programming in C" name="twitter:title"/>
+<meta content="Week 8 Lecture   Big O Notation" property="og:title"/>
+<meta content="Week 8 Lecture   Big O Notation" name="twitter:title"/>
 <meta content="Course notes, code demos, and tutorials" name="og:description"/>
 <meta content="Course notes, code demos, and tutorials" name="twitter:description"/>
-<script> document.title = "COP 3223C - Introduction to Programming in C" </script>
-<link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+<script> document.title = "Week 8 Lecture   Big O Notation" </script>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
@@ -50,7 +51,7 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
-<a class="md-skip" href=".">
+<a class="md-skip" href="../..">
           Skip to content
         </a>
 </div>
@@ -58,8 +59,8 @@
 </div>
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
 <nav aria-label="Header" class="md-header__inner md-grid">
-<a aria-label="COP 3223C - Introduction to Programming in C" class="md-header__button md-logo" data-md-component="logo" href="." title="COP 3223C - Introduction to Programming in C">
-<img alt="logo" src="_assets/meta/logo.svg"/>
+<a aria-label="COP 3223C - Introduction to Programming in C" class="md-header__button md-logo" data-md-component="logo" href="../.." title="COP 3223C - Introduction to Programming in C">
+<img alt="logo" src="../../_assets/meta/logo.svg"/>
 </a>
 <label class="md-header__button md-icon" for="__drawer">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
@@ -74,7 +75,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Home
+              Week 8 Lecture   Big O Notation
             
           </span>
 </div>
@@ -126,8 +127,8 @@
 <nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
 <div class="md-grid">
 <ul class="md-tabs__list">
-<li class="md-tabs__item md-tabs__item--active">
-<a class="md-tabs__link" href=".">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -136,7 +137,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="Assignments/Week%205%20Assignment/">
+<a class="md-tabs__link" href="../../Assignments/Week%205%20Assignment/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -145,7 +146,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="Examples/Compacting%20an%20Array%20%28naive%29/">
+<a class="md-tabs__link" href="../../Examples/Compacting%20an%20Array%20%28naive%29/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -153,8 +154,8 @@
 
         </a>
 </li>
-<li class="md-tabs__item">
-<a class="md-tabs__link" href="Lecture%20Slides/Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -163,7 +164,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="Supplementary%20Material/%2B%2B%20Operator/">
+<a class="md-tabs__link" href="../../Supplementary%20Material/%2B%2B%20Operator/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -172,7 +173,7 @@
         </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="blog/">
+<a class="md-tabs__link" href="../../blog/">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
     
   
@@ -187,67 +188,24 @@
 <div class="md-container" data-md-component="container">
 <main class="md-main" data-md-component="main">
 <div class="md-main__inner md-grid">
-<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden="">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
 <label class="md-nav__title" for="__drawer">
-<a aria-label="COP 3223C - Introduction to Programming in C" class="md-nav__button md-logo" data-md-component="logo" href="." title="COP 3223C - Introduction to Programming in C">
-<img alt="logo" src="_assets/meta/logo.svg"/>
+<a aria-label="COP 3223C - Introduction to Programming in C" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="COP 3223C - Introduction to Programming in C">
+<img alt="logo" src="../../_assets/meta/logo.svg"/>
 </a>
     COP 3223C - Introduction to Programming in C
   </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<label class="md-nav__link md-nav__link--active" for="__toc">
-<svg height="18" viewbox="0 0 1024 1024" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M843.5 737.4c-12.4-75.2-79.2-129.1-155.3-125.4S550.9 676 546 752c-153.5-4.8-208-40.7-199.1-113.7c3.3-27.3 19.8-41.9 50.1-49c18.4-4.3 38.8-4.9 57.3-3.2c1.7.2 3.5.3 5.2.5c11.3 2.7 22.8 5 34.3 6.8c34.1 5.6 68.8 8.4 101.8 6.6c92.8-5 156-45.9 159.2-132.7c3.1-84.1-54.7-143.7-147.9-183.6c-29.9-12.8-61.6-22.7-93.3-30.2c-14.3-3.4-26.3-5.7-35.2-7.2c-7.9-75.9-71.5-133.8-147.8-134.4S189.7 168 180.5 243.8s40 146.3 114.2 163.9s149.9-23.3 175.7-95.1c9.4 1.7 18.7 3.6 28 5.8c28.2 6.6 56.4 15.4 82.4 26.6c70.7 30.2 109.3 70.1 107.5 119.9c-1.6 44.6-33.6 65.2-96.2 68.6c-27.5 1.5-57.6-.9-87.3-5.8c-8.3-1.4-15.9-2.8-22.6-4.3c-3.9-.8-6.6-1.5-7.8-1.8l-3.1-.6c-2.2-.3-5.9-.8-10.7-1.3c-25-2.3-52.1-1.5-78.5 4.6c-55.2 12.9-93.9 47.2-101.1 105.8c-15.7 126.2 78.6 184.7 276 188.9c29.1 70.4 106.4 107.9 179.6 87c73.3-20.9 119.3-93.4 106.9-168.6M329.1 345.2c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3M695.6 845c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3" fill="currentColor"></path></svg>
-<span class="md-ellipsis">
-    Home
-  </span>
-<span class="md-nav__icon md-icon"></span>
-</label>
-<a class="md-nav__link md-nav__link--active" href=".">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
 <svg height="18" viewbox="0 0 1024 1024" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M843.5 737.4c-12.4-75.2-79.2-129.1-155.3-125.4S550.9 676 546 752c-153.5-4.8-208-40.7-199.1-113.7c3.3-27.3 19.8-41.9 50.1-49c18.4-4.3 38.8-4.9 57.3-3.2c1.7.2 3.5.3 5.2.5c11.3 2.7 22.8 5 34.3 6.8c34.1 5.6 68.8 8.4 101.8 6.6c92.8-5 156-45.9 159.2-132.7c3.1-84.1-54.7-143.7-147.9-183.6c-29.9-12.8-61.6-22.7-93.3-30.2c-14.3-3.4-26.3-5.7-35.2-7.2c-7.9-75.9-71.5-133.8-147.8-134.4S189.7 168 180.5 243.8s40 146.3 114.2 163.9s149.9-23.3 175.7-95.1c9.4 1.7 18.7 3.6 28 5.8c28.2 6.6 56.4 15.4 82.4 26.6c70.7 30.2 109.3 70.1 107.5 119.9c-1.6 44.6-33.6 65.2-96.2 68.6c-27.5 1.5-57.6-.9-87.3-5.8c-8.3-1.4-15.9-2.8-22.6-4.3c-3.9-.8-6.6-1.5-7.8-1.8l-3.1-.6c-2.2-.3-5.9-.8-10.7-1.3c-25-2.3-52.1-1.5-78.5 4.6c-55.2 12.9-93.9 47.2-101.1 105.8c-15.7 126.2 78.6 184.7 276 188.9c29.1 70.4 106.4 107.9 179.6 87c73.3-20.9 119.3-93.4 106.9-168.6M329.1 345.2c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3M695.6 845c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Home
   </span>
 </a>
-<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
-<label class="md-nav__title" for="__toc">
-<span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
-<li class="md-nav__item">
-<a class="md-nav__link" href="#during-an-assignment">
-<span class="md-ellipsis">
-      
-        During an Assignment
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#before-class">
-<span class="md-ellipsis">
-      
-        Before Class
-      
-    </span>
-</a>
-</li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#somethings-missing-or-broken">
-<span class="md-ellipsis">
-      
-        Something’s missing or broken?
-      
-    </span>
-</a>
-</li>
-</ul>
-</nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
@@ -265,7 +223,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Assignments/Week%205%20Assignment/">
+<a class="md-nav__link" href="../../Assignments/Week%205%20Assignment/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 5 Assignment
@@ -291,7 +249,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Examples/Compacting%20an%20Array%20%28naive%29/">
+<a class="md-nav__link" href="../../Examples/Compacting%20an%20Array%20%28naive%29/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Compacting an Array (naive)
@@ -299,7 +257,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Examples/test-cop3223c/">
+<a class="md-nav__link" href="../../Examples/test-cop3223c/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Test cop3223c
@@ -309,23 +267,23 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Lecture Slides
   </span>
 <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Lecture Slides
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
+<a class="md-nav__link" href="../Lesson%201a%20-%20Introduction%20to%20COP%203223C/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1a   Introduction to COP 3223C
@@ -333,7 +291,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Lesson%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1b   Introduction to GitHub Codespaces
@@ -341,7 +299,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Lesson%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 1c   Debugging C in GitHub Codespaces
@@ -349,7 +307,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%202/">
+<a class="md-nav__link" href="../Lesson%202/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 2
@@ -357,7 +315,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%203/">
+<a class="md-nav__link" href="../Lesson%203/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 3
@@ -365,7 +323,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%203b%20-%20const/">
+<a class="md-nav__link" href="../Lesson%203b%20-%20const/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 3b   const
@@ -373,7 +331,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Lesson%204a/">
+<a class="md-nav__link" href="../Lesson%204a/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Lesson 4a
@@ -381,7 +339,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%201a%20-%20Introduction%20to%20COP%203223C/">
+<a class="md-nav__link" href="../Week%201a%20-%20Introduction%20to%20COP%203223C/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 1a   Introduction to COP 3223C
@@ -389,7 +347,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Week%201b%20-%20Introduction%20to%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 1b   Introduction to GitHub Codespaces
@@ -397,7 +355,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
+<a class="md-nav__link" href="../Week%201c%20-%20Debugging%20C%20in%20GitHub%20Codespaces/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 1c   Debugging C in GitHub Codespaces
@@ -405,7 +363,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%202/">
+<a class="md-nav__link" href="../Week%202/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 2
@@ -413,7 +371,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%203/">
+<a class="md-nav__link" href="../Week%203/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 3
@@ -421,7 +379,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%203b%20-%20const/">
+<a class="md-nav__link" href="../Week%203b%20-%20const/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 3b   const
@@ -429,7 +387,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%204a/">
+<a class="md-nav__link" href="../Week%204a/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 4a
@@ -437,7 +395,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%204b/">
+<a class="md-nav__link" href="../Week%204b/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 4b
@@ -445,7 +403,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%205a/">
+<a class="md-nav__link" href="../Week%205a/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 5a
@@ -453,7 +411,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%205b/">
+<a class="md-nav__link" href="../Week%205b/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 5b
@@ -461,7 +419,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%206a/">
+<a class="md-nav__link" href="../Week%206a/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 6a
@@ -469,7 +427,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%206b/">
+<a class="md-nav__link" href="../Week%206b/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 6b
@@ -477,7 +435,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%207%20Lectures%20%28parts%201%20and%202%29/">
+<a class="md-nav__link" href="../Week%207%20Lectures%20%28parts%201%20and%202%29/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 7 Lectures (parts 1 and 2)
@@ -485,23 +443,151 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%208%20Lab%20-%20Linked%20Lists/">
+<a class="md-nav__link" href="../Week%208%20Lab%20-%20Linked%20Lists/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 8 Lab   Linked Lists
   </span>
 </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%208%20Lecture%20-%20Big%20O%20Notation/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
+<span class="md-ellipsis">
+    Week 8 Lecture   Big O Notation
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 8 Lecture   Big O Notation
   </span>
 </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#algorithm-efficiency">
+<span class="md-ellipsis">
+      
+        Algorithm Efficiency
+      
+    </span>
+</a>
+<nav aria-label="Algorithm Efficiency" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-primer-on-big-o-notation">
+<span class="md-ellipsis">
+      
+        A Primer on Big O Notation
+      
+    </span>
+</a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Lecture%20Slides/Week%208%20Lecture%20-%20Linked%20Lists%20v2/">
+<a class="md-nav__link" href="#the-problem-with-time">
+<span class="md-ellipsis">
+      
+        The Problem with “Time”
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-universal-metric">
+<span class="md-ellipsis">
+      
+        A Universal Metric
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-big-o-notation">
+<span class="md-ellipsis">
+      
+        What is Big O Notation?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o1-constant-time">
+<span class="md-ellipsis">
+      
+        \(O(1)\) — Constant Time
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o1-examples">
+<span class="md-ellipsis">
+      
+        \(O(1)\) Examples
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on2-quadratic-time">
+<span class="md-ellipsis">
+      
+        \(O(N^2)\) — Quadratic Time
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on2-code-example">
+<span class="md-ellipsis">
+      
+        \(O(N^2)\) Code Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-loops-n-n-operations-void-print_pairsint-n-int-i-j-for-i-0-i-n-i-forj-0-j-n-j-printfd-dn-i-j">
+<span class="md-ellipsis">
+      
+        // Nested loops = N * N operations void print_pairs(int n) { int i, j; for (i = 0; i &lt; n; i++) { for(j = 0; j &lt; n; j++) { printf("%d, %d\n", i, j); } } }
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#golden-rules-of-big-o">
+<span class="md-ellipsis">
+      
+        Golden Rules of Big O
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-big-o-matters-now">
+<span class="md-ellipsis">
+      
+        Why Big O Matters Now
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Week%208%20Lecture%20-%20Linked%20Lists%20v2/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Week 8 Lecture   Linked Lists v2
@@ -527,7 +613,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="Supplementary%20Material/%2B%2B%20Operator/">
+<a class="md-nav__link" href="../../Supplementary%20Material/%2B%2B%20Operator/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     ++ Operator
@@ -535,7 +621,7 @@
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="Supplementary%20Material/Intro%20to%20Programming%20with%20C%20with%20Annika/">
+<a class="md-nav__link" href="../../Supplementary%20Material/Intro%20to%20Programming%20with%20C%20with%20Annika/">
 <svg fill="currentColor" height="16px" viewbox="0 0 24 24" width="16px" xmlns="http://www.w3.org/2000/svg"><path d="M19.903 8.586a.997.997 0 0 0-.196-.293l-6-6a.997.997 0 0 0-.293-.196c-.03-.014-.062-.022-.094-.033a.991.991 0 0 0-.259-.051C13.04 2.011 13.021 2 13 2H6c-1.103 0-2 .897-2 2v16c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V9c0-.021-.011-.04-.013-.062a.952.952 0 0 0-.051-.259c-.01-.032-.019-.063-.033-.093zM16.586 8H14V5.414L16.586 8zM6 20V4h6v5a1 1 0 0 0 1 1h5l.002 10H6z"></path><path d="M8 12h8v2H8zm0 4h8v2H8zm0-8h2v2H8z"></path></svg>
 <span class="md-ellipsis">
     Intro to Programming with C with Annika
@@ -548,7 +634,7 @@
 <li class="md-nav__item md-nav__item--nested">
 <input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="blog/">
+<a class="md-nav__link" href="../../blog/">
 <svg height="18" viewbox="0 0 1024 1024" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M843.5 737.4c-12.4-75.2-79.2-129.1-155.3-125.4S550.9 676 546 752c-153.5-4.8-208-40.7-199.1-113.7c3.3-27.3 19.8-41.9 50.1-49c18.4-4.3 38.8-4.9 57.3-3.2c1.7.2 3.5.3 5.2.5c11.3 2.7 22.8 5 34.3 6.8c34.1 5.6 68.8 8.4 101.8 6.6c92.8-5 156-45.9 159.2-132.7c3.1-84.1-54.7-143.7-147.9-183.6c-29.9-12.8-61.6-22.7-93.3-30.2c-14.3-3.4-26.3-5.7-35.2-7.2c-7.9-75.9-71.5-133.8-147.8-134.4S189.7 168 180.5 243.8s40 146.3 114.2 163.9s149.9-23.3 175.7-95.1c9.4 1.7 18.7 3.6 28 5.8c28.2 6.6 56.4 15.4 82.4 26.6c70.7 30.2 109.3 70.1 107.5 119.9c-1.6 44.6-33.6 65.2-96.2 68.6c-27.5 1.5-57.6-.9-87.3-5.8c-8.3-1.4-15.9-2.8-22.6-4.3c-3.9-.8-6.6-1.5-7.8-1.8l-3.1-.6c-2.2-.3-5.9-.8-10.7-1.3c-25-2.3-52.1-1.5-78.5 4.6c-55.2 12.9-93.9 47.2-101.1 105.8c-15.7 126.2 78.6 184.7 276 188.9c29.1 70.4 106.4 107.9 179.6 87c73.3-20.9 119.3-93.4 106.9-168.6M329.1 345.2c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3M695.6 845c-46 0-83.3-37.3-83.3-83.3s37.3-83.3 83.3-83.3s83.3 37.3 83.3 83.3s-37.3 83.3-83.3 83.3" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Blog
@@ -565,7 +651,7 @@
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href=".">
+<a class="md-nav__link" href="../..">
 <svg height="18" viewbox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.5v6.604l1.5-2.6a3 3 0 0 1 2.599-1.5H15V7.5A1.5 1.5 0 0 0 13.5 6h-4a.5.5 0 0 1-.353-.146L7.44 4.146A.5.5 0 0 0 7.086 4H4.5A1.5 1.5 0 0 0 3 5.5m1.284 10.485q.106.015.22.015H13.9a2 2 0 0 0 1.732-1l2.163-3.745a1.5 1.5 0 0 0-1.3-2.25H7.1a2 2 0 0 0-1.732 1L3.205 13.75a1.5 1.5 0 0 0 1.079 2.235M2 14.46V5.5A2.5 2.5 0 0 1 4.5 3h2.586a1.5 1.5 0 0 1 1.06.44L9.708 5H13.5A2.5 2.5 0 0 1 16 7.5v.505h.496c1.925 0 3.128 2.083 2.166 3.75L16.499 15.5a3 3 0 0 1-2.598 1.5h-9.4q-.095 0-.186-.007a2.46 2.46 0 0 1-1.438-.592A2.5 2.5 0 0 1 2 14.461" fill="currentColor"></path></svg>
 <span class="md-ellipsis">
     Archive
@@ -580,7 +666,7 @@
 </div>
 </div>
 </div>
-<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden="">
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Table of contents" class="md-nav md-nav--secondary">
@@ -590,28 +676,113 @@
     </label>
 <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#during-an-assignment">
+<a class="md-nav__link" href="#algorithm-efficiency">
 <span class="md-ellipsis">
       
-        During an Assignment
+        Algorithm Efficiency
+      
+    </span>
+</a>
+<nav aria-label="Algorithm Efficiency" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-primer-on-big-o-notation">
+<span class="md-ellipsis">
+      
+        A Primer on Big O Notation
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#before-class">
+<a class="md-nav__link" href="#the-problem-with-time">
 <span class="md-ellipsis">
       
-        Before Class
+        The Problem with “Time”
       
     </span>
 </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#somethings-missing-or-broken">
+<a class="md-nav__link" href="#a-universal-metric">
 <span class="md-ellipsis">
       
-        Something’s missing or broken?
+        A Universal Metric
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#what-is-big-o-notation">
+<span class="md-ellipsis">
+      
+        What is Big O Notation?
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o1-constant-time">
+<span class="md-ellipsis">
+      
+        \(O(1)\) — Constant Time
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#o1-examples">
+<span class="md-ellipsis">
+      
+        \(O(1)\) Examples
+      
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on2-quadratic-time">
+<span class="md-ellipsis">
+      
+        \(O(N^2)\) — Quadratic Time
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#on2-code-example">
+<span class="md-ellipsis">
+      
+        \(O(N^2)\) Code Example
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nested-loops-n-n-operations-void-print_pairsint-n-int-i-j-for-i-0-i-n-i-forj-0-j-n-j-printfd-dn-i-j">
+<span class="md-ellipsis">
+      
+        // Nested loops = N * N operations void print_pairs(int n) { int i, j; for (i = 0; i &lt; n; i++) { for(j = 0; j &lt; n; j++) { printf("%d, %d\n", i, j); } } }
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#golden-rules-of-big-o">
+<span class="md-ellipsis">
+      
+        Golden Rules of Big O
+      
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#why-big-o-matters-now">
+<span class="md-ellipsis">
+      
+        Why Big O Matters Now
       
     </span>
 </a>
@@ -650,27 +821,139 @@
   Hack: check whether the content contains a h1 headline. If it doesn't, the
   page title (or respectively site name) is used as the main headline.
 -->
-<h1>Home</h1>
+<h1>Week 8 Lecture   Big O Notation</h1>
 <!-- Page content -->
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="auto" href="https://teaching.johnaedo.com/images/cop3223c-banner.svg"><img alt="COP 3223C Banner Image|700" src="https://teaching.johnaedo.com/images/cop3223c-banner.svg"/></a></p>
-<p>Welcome to the course notes site for COP 3223C. This is the home for material that’s too cumbersome for Webcourses or doesn’t render well there — reference docs, walkthroughs, live-code demos, and slide decks all live here.</p>
-<p>Use the navigation tabs at the top or the sidebar to find what you need. The search bar (top right) works across everything — it’s the fastest way to find a specific function, concept, or assignment step.</p>
-<h2 id="during-an-assignment">During an Assignment<a class="headerlink" href="#during-an-assignment" title="Permanent link">¶</a></h2>
-<p>The Code Demos and Tutorials are intended to be walk-through tutorials.  Use them to come up to speed on the technologies you’ll need to complete your projects and feel free to reference individual sections as needed.  The product of these tutorials will be a foundation that you can build on for your projects.</p>
-<h2 id="before-class">Before Class<a class="headerlink" href="#before-class" title="Permanent link">¶</a></h2>
-<p>For the time being, most lectures will be on Webcourses, but anything supplemental (i.e., that I author to augment the material) will be posted here.  Eventually all lectures will be posted here and on Webcourses.</p>
-<h2 id="somethings-missing-or-broken">Something’s missing or broken?<a class="headerlink" href="#somethings-missing-or-broken" title="Permanent link">¶</a></h2>
-<p>Email me with “COP 3223C Site Bug” in the subject. If a page has a mistake, I’ll note corrections at the top of that page.</p>
+<h2 id="algorithm-efficiency">Algorithm Efficiency<a class="headerlink" href="#algorithm-efficiency" title="Permanent link">¶</a></h2>
+<h3 id="a-primer-on-big-o-notation">A Primer on Big O Notation<a class="headerlink" href="#a-primer-on-big-o-notation" title="Permanent link">¶</a></h3>
+<hr/>
+<h3 id="the-problem-with-time">The Problem with “Time”<a class="headerlink" href="#the-problem-with-time" title="Permanent link">¶</a></h3>
+<ul>
+<li>How do we know if code is fast?</li>
+<li>We cannot just use a stopwatch.</li>
+<li>Execution time changes based on:</li>
+<li>CPU speed</li>
+<li>Background processes</li>
+<li>Compiler optimizations</li>
+<li>many other factors we can’t control!</li>
+</ul>
+<hr/>
+<h3 id="a-universal-metric">A Universal Metric<a class="headerlink" href="#a-universal-metric" title="Permanent link">¶</a></h3>
+<ul>
+<li>Instead of seconds, we measure scaling.</li>
+<li>We ask: As the input size (<span class="arithmatex">\(N\)</span>) grows, how does the number of operations grow?</li>
+<li>This is called Asymptotic Analysis.</li>
+<li>Commonly referred to as Big O Notation.</li>
+</ul>
+<hr/>
+<h3 id="what-is-big-o-notation">What is Big O Notation?<a class="headerlink" href="#what-is-big-o-notation" title="Permanent link">¶</a></h3>
+<ul>
+<li>Describes the worst-case scenario.</li>
+<li>Focuses on the “order of magnitude”.</li>
+<li>Ignore exact operation counts.</li>
+<li>Look at the dominant trend as <span class="arithmatex">\(N\)</span> approaches infinity.</li>
+</ul>
+<hr/>
+<h3 id="o1-constant-time"><span class="arithmatex">\(O(1)\)</span> — Constant Time<a class="headerlink" href="#o1-constant-time" title="Permanent link">¶</a></h3>
+<ul>
+<li>The fastest classification.</li>
+<li>Time taken does not depend on <span class="arithmatex">\(N\)</span>.</li>
+<li>Whether <span class="arithmatex">\(N\)</span> is 10 or 10,000,000, it takes the same amount of effort.</li>
+</ul>
+<hr/>
+<h3 id="o1-examples"><span class="arithmatex">\(O(1)\)</span> Examples<a class="headerlink" href="#o1-examples" title="Permanent link">¶</a></h3>
+<ul>
+<li>Accessing an array element: <code>arr[5]</code></li>
+<li>Checking if a number is even.</li>
+<li>Inserting a node at the head of a linked list.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// N does not matter here</span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="nf">get_first</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-3" id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"> </span>
+<a href="#__codelineno-0-4" id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">}</span>
+<a href="#__codelineno-0-5" id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="err">````</span>
+<a href="#__codelineno-0-6" id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">---</span>
+<a href="#__codelineno-0-7" id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a href="#__codelineno-0-8" id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="cp">## $O(N)$ — Linear Time</span>
+<a href="#__codelineno-0-9" id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a href="#__codelineno-0-10" id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="o">-</span><span class="w"> </span><span class="n">Time</span><span class="w"> </span><span class="n">grows</span><span class="w"> </span><span class="n">directly</span><span class="w"> </span><span class="n">proportional</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">$N$</span><span class="p">.</span>
+<a href="#__codelineno-0-11" id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="o">-</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">algorithm</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="n">twice</span><span class="w"> </span><span class="n">as</span><span class="w"> </span><span class="kt">long</span><span class="p">.</span>
+<a href="#__codelineno-0-12" id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="o">-</span><span class="w"> </span><span class="n">Usually</span><span class="w"> </span><span class="n">involves</span><span class="w"> </span><span class="n">looking</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">every</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="n">once</span><span class="p">.</span>
+<a href="#__codelineno-0-13" id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a href="#__codelineno-0-14" id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="o">---</span>
+<a href="#__codelineno-0-15" id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="cp">## $O(N)$ Examples</span>
+<a href="#__codelineno-0-16" id="__codelineno-0-16" name="__codelineno-0-16"></a>
+<a href="#__codelineno-0-17" id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="o">-</span><span class="w"> </span><span class="n">Searching</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">unsorted</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">value</span><span class="p">.</span>
+<a href="#__codelineno-0-18" id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="o">-</span><span class="w"> </span><span class="n">Finding</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">maximum</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">array</span><span class="p">.</span>
+<a href="#__codelineno-0-19" id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="o">-</span><span class="w"> </span><span class="n">Counting</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">nodes</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">linked</span><span class="w"> </span><span class="n">list</span>
+<a href="#__codelineno-0-20" id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a href="#__codelineno-0-21" id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="o">---</span>
+<a href="#__codelineno-0-22" id="__codelineno-0-22" name="__codelineno-0-22"></a>
+<a href="#__codelineno-0-23" id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="cp">## $O(N)$ Code Example</span>
+<a href="#__codelineno-0-24" id="__codelineno-0-24" name="__codelineno-0-24"></a>
+<a href="#__codelineno-0-25" id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="err">```</span><span class="n">c</span>
+<a href="#__codelineno-0-26" id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="c1">// Loop runs exactly N times</span>
+<a href="#__codelineno-0-27" id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="kt">void</span><span class="w"> </span><span class="n">print_all</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-28" id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a href="#__codelineno-0-29" id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-0-30" id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<a href="#__codelineno-0-31" id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-0-32" id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">}</span>
+</code></pre></div>
+<hr/>
+<h2 id="on2-quadratic-time"><span class="arithmatex">\(O(N^2)\)</span> — Quadratic Time<a class="headerlink" href="#on2-quadratic-time" title="Permanent link">¶</a></h2>
+<ul>
+<li>Time grows exponentially with <span class="arithmatex">\(N\)</span>.</li>
+<li>If you double the input, the time quadruples!</li>
+<li>Often the result of nested loops</li>
+<li>Dangerous for large data sets.</li>
+</ul>
+<hr/>
+<h2 id="on2-code-example"><span class="arithmatex">\(O(N^2)\)</span> Code Example<a class="headerlink" href="#on2-code-example" title="Permanent link">¶</a></h2>
+<h2 id="nested-loops-n-n-operations-void-print_pairsint-n-int-i-j-for-i-0-i-n-i-forj-0-j-n-j-printfd-dn-i-j"><div class="highlight"><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Nested loops = N * N operations</span>
+<a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">print_pairs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="k">for</span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">"%d, %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span>
+<a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="p">}</span>
+<a href="#__codelineno-1-8" id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="p">}</span>
+<a href="#__codelineno-1-9" id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="p">}</span>
+</code></pre></div><a class="headerlink" href="#nested-loops-n-n-operations-void-print_pairsint-n-int-i-j-for-i-0-i-n-i-forj-0-j-n-j-printfd-dn-i-j" title="Permanent link">¶</a></h2>
+<h2 id="golden-rules-of-big-o">Golden Rules of Big O<a class="headerlink" href="#golden-rules-of-big-o" title="Permanent link">¶</a></h2>
+<ul>
+<li>
+<p><strong>Drop constants:</strong> <span class="arithmatex">\(O(2N)\)</span> is just <span class="arithmatex">\(O(N)\)</span>. We only care about the shape of the curve.</p>
+</li>
+<li>
+<p><strong>Drop smaller terms:</strong> <span class="arithmatex">\(O(N^2 + N)\)</span> becomes <span class="arithmatex">\(O(N^2)\)</span>. As <span class="arithmatex">\(N\)</span> gets massive, the <span class="arithmatex">\(N^2\)</span> completely dominates the runtime.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="why-big-o-matters-now">Why Big O Matters Now<a class="headerlink" href="#why-big-o-matters-now" title="Permanent link">¶</a></h2>
+<ul>
+<li>Arrays vs. Linked Lists!</li>
+<li>Inserting at the front of an Array:<ul>
+<li>Must shift every element down.</li>
+<li>Time Complexity: <span class="arithmatex">\(O(N)\)</span></li>
+</ul>
+</li>
+<li>Inserting at the front of a Linked List:<ul>
+<li>Just update two pointers.</li>
+<li>Time Complexity: <span class="arithmatex">\(O(1)\)</span></li>
+</ul>
+</li>
+<li>Knowing Big O helps us choose the right tool for the job.</li>
+</ul>
 <hr/>
 <div class="md-source-file">
 <small>
 <!-- mkdocs-git-revision-date-localized-plugin -->
 <u>Last update</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 14, 2026 18:11:02 UTC">May 14, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2026 21:08:53 UTC">July 24, 2026</span>
 <!-- mkdocs-git-revision-date-plugin -->
 <br/>
 <u>Created</u> :
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="May 14, 2026 18:11:02 UTC">May 14, 2026</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="July 24, 2026 21:08:53 UTC">July 24, 2026</span>
 </small>
 </div>
 <!-- Was this page helpful? -->
@@ -679,7 +962,7 @@
     try {
       const index = document.querySelector('h1').innerHTML;
       if (index === "Index") {
-        document.querySelector('h1').innerHTML = "Home";
+        document.querySelector('h1').innerHTML = "Week 8 Lecture   Big O Notation";
       }
     } catch (error) {
       // console.log(error);
@@ -717,11 +1000,11 @@
 <div class="md-dialog" data-md-component="dialog">
 <div class="md-dialog__inner md-typeset"></div>
 </div>
-<script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.indexes", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-<script src="assets/javascripts/bundle.d7400e89.min.js"></script>
-<script src="_static/js/mathjax.js"></script>
+<script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+<script src="../../_static/js/mathjax.js"></script>
 <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="_static/js/snippets.js"></script>
+<script src="../../_static/js/snippets.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Enveloppe/_static@refs/heads/master/dist/index.js"></script>
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 document$.subscribe(()=>{ lightbox.reload(); });
