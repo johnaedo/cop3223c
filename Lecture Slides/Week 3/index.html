@@ -2141,7 +2141,7 @@ Reach for globals only when you can articulate a specific reason.</p>
 </code></pre></div><p></p>
 <p><strong><code>combat.c</code></strong><br/>
 </p><div class="highlight"><pre><span></span><code><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="c1">// include our own header — compiler checks our signature</span>
-<a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"combat.h"</span><span class="c1">    </span>
+<a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"combat.h"</span><span class="w">    </span>
 <a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a>
 <a href="#__codelineno-28-4" id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="kt">int</span><span class="w"> </span><span class="nf">calculate_damage</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">attack</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">defense</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a href="#__codelineno-28-5" id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attack</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">defense</span><span class="p">;</span>
@@ -2223,9 +2223,9 @@ The <code>.c</code> file is the <strong>private implementation</strong>.</p>
 <hr/>
 <h2 id="angle-brackets-vs-quotes">Angle Brackets vs. Quotes<a class="headerlink" href="#angle-brackets-vs-quotes" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="c1">// search the system include directories</span>
-<a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1"> </span>
+<a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="w"> </span>
 <a href="#__codelineno-30-3" id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="c1">// search the current directory first, then system    </span>
-<a href="#__codelineno-30-4" id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"combat.h"</span><span class="c1">    </span>
+<a href="#__codelineno-30-4" id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"combat.h"</span><span class="w">    </span>
 </code></pre></div>
 <p><code>&lt; &gt;</code> — standard library and installed third-party headers<br/>
 <code>" "</code> — your own project’s headers</p>
